@@ -1,0 +1,12 @@
+.title {
+  &-yellow {
+    @include gagalin($yellow);
+  }
+  &-black {
+    @include gagalin($black);
+  }
+  &-h4 {
+    @include gagalin(#fff);
+    font-size: 14px;
+  }
+}

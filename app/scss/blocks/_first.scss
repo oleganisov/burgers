@@ -1,0 +1,26 @@
+.first {
+  background: url('../img/bg/first-bg.png') no-repeat center center / cover;
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__pic {
+    margin-right: 15px;
+  }
+  &__desc{
+    padding-top: 6%;
+  }
+  &__tittle {
+    margin-bottom: 25px;
+  }
+  &__text {
+    @include lifehack;
+    line-height: 55px;
+  }
+}
+
+.next-screen {
+  text-align: center;
+  margin-bottom: 40px;
+}

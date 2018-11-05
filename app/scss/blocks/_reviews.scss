@@ -1,0 +1,39 @@
+.reviews {
+  background-color: #000;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  &__item {
+    width: 25%;
+    height: 50%;
+    filter: grayscale(100%);
+    position: relative;
+
+  }
+  &__title{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+  }
+  &__text{
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 25px;
+  }
+  &__hover-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15% 9% 0 5%;
+    background: rgba(#000, .5);
+    opacity: 0;
+    transition: .5s;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

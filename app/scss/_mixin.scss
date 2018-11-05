@@ -1,0 +1,13 @@
+@mixin gagalin($color:$yellow) {
+  font-family: Gagalin;
+  font-size: 72px;
+  color: $color;
+  font-weight: normal;
+}
+
+@mixin lifehack($color:#fff, $fz: 65px) {
+  font-family: LifeHack;
+  font-weight: normal;
+  font-size: $fz;
+  color: $color;
+}
