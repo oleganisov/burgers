@@ -40,5 +40,10 @@
       height: 16px;
       opacity: 1;
     }
+    &:hover::after{
+      width: 16px;
+      height: 16px;
+      opacity: 1;
+    }
   }
 }

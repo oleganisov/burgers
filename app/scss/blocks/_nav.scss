@@ -9,11 +9,10 @@
     font-weight: 500;
     font-style: normal;
     font-size: 13px;
-    margin-right: 16px;
     &::after {
       content: '\2022';
       color: #fff;
-      padding-left: 16px;
+      margin: 0 14px;
     }
     &:last-child::after{
       display: none;
