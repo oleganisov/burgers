@@ -49,8 +49,8 @@
 								</ul>
 							</div>
 						</nav>
-						<div class="order">
-							<a href="#" class="order__btn btn">Заказать</a>
+						<div class="order-btn">
+							<a href="#" class="btn btn-red">Заказать</a>
 						</div>
 					</div>
 				</header>
@@ -221,6 +221,80 @@
 					</div>
 				</li>
 			</ul>
+		</section>
+		<section class="section delivery">
+			<div class="container">
+				<h2 class="delivery__title title-yellow">Закажите доставку</h2>
+				<form action="post" class="delivery__content">
+					<div class="delivery__left">
+						<div class="delivery__row">
+							<label class="delivery__input">
+								<div class="delivery__input-title">Имя</div>
+								<input type="text" class="delivery__input-text" placeholder="Иван">
+							</label>
+							<label class="delivery__input">
+								<div class="delivery__input-title">Телефон</div>
+								<input type="text" class="delivery__input-text" placeholder="89212264923">
+							</label>
+						</div>
+						<div class="delivery__row">
+							<label class="delivery__input">
+								<div class="delivery__input-title">Улица</div>
+								<input type="text" class="delivery__input-text" placeholder="">
+							</label>
+						</div>
+						<div class="delivery__row">
+							<label class="delivery__input">
+								<div class="delivery__input-title">Дом</div>
+								<input type="text" class="delivery__input-text" placeholder="">
+							</label>
+							<label class="delivery__input">
+								<div class="delivery__input-title">Корпус</div>
+								<input type="text" class="delivery__input-text" placeholder="">
+							</label>
+							<label class="delivery__input">
+								<div class="delivery__input-title">Квартира</div>
+								<input type="text" class="delivery__input-text" placeholder="">
+							</label>
+							<label class="delivery__input">
+								<div class="delivery__input-title">Этаж</div>
+								<input type="text" class="delivery__input-text" placeholder="">
+							</label>
+						</div>
+					</div>
+					<div class="delivery__right">
+						<div class="delivery__row">
+							<label class="delivery__textarea-label">
+								<div class="delivery__input-title">Комментарий</div>
+								<textarea class="delivery__input-text delivery__textarea" placeholder=""></textarea>
+							</label>
+						</div>
+						<div class="delivery__row">
+							<label class="delivery__radio">
+								<input type="radio" class="delivery__radio-elem" name="pay">
+								<div class="form__radio-fake"></div>
+								<div class="form__radio-text">Потребуется сдача</div>
+							</label>
+							<label class="delivery__radio">
+								<input type="radio" class="delivery__radio-elem" name="pay" checked>
+								<div class="delivery__radio-fake"></div>
+								<div class="delivery__radio-text">Оплата по карте</div>
+							</label>
+						</div>
+						<div class="delivery__row">
+							<label class="delivery__chbox">
+								<input type="checkbox" class="delivery__chbox-elem" checked>
+								<div class="delivery__chbox-fake"></div>
+								<div class="delivery__chbox-text">Не перезванивать</div>
+							</label>
+						</div>
+						<div class="delivery__row">
+							<a href="#" class="btn btn-red">Заказать</a>
+							<a href="#" class="btn">Очистить</a>
+						</div>
+					</div>
+				</form>
+			</div>
 		</section>
 	</div>
 	<div class="points">

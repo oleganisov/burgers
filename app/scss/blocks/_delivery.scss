@@ -1,0 +1,42 @@
+.delivery {
+  background: url('../img/bg/delivery-bg.png') no-repeat center center / cover;
+  &__content {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  }
+  &__left,
+  &__right {
+    flex: 1;
+  }
+  &__row {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__input {
+    margin-right: 20px;
+  }
+  &__input-title {
+    margin-bottom: 10px;
+  }
+  &__input-text {
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 20px;
+  }
+  &__textarea {
+    resize: none;
+    width: 458px;
+    height: 108px;
+  }
+  &__radio {
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  &__radio-elem {
+    position: absolute;
+    // top: 0;
+    // left: -9999px;
+  }
+}
