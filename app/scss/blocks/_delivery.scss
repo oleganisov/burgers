@@ -1,5 +1,8 @@
 .delivery {
   background: url('../img/bg/delivery-bg.png') no-repeat center center / cover;
+  &__title{
+    margin-bottom: 56px;
+  }
   &__content {
     display: flex;
     justify-content: center;
@@ -7,7 +10,7 @@
   }
   &__left,
   &__right {
-    flex: 1;
+    // flex-shrink: 1;
   }
   &__row {
     display: flex;
@@ -21,22 +24,63 @@
   }
   &__input-text {
     height: 35px;
+    border: 2px solid transparent;
     border-radius: 5px;
     padding-left: 20px;
   }
   &__textarea {
     resize: none;
-    width: 458px;
-    height: 108px;
+    width: 32.86em;
+    height: 7.71em;
   }
-  &__radio {
-    position: relative;
-    cursor: pointer;
-    margin-right: 20px;
+  &__input-text:focus {
+    outline: none;
+    border: 2px solid $yellow;
   }
-  &__radio-elem {
+}
+
+.delivery__radio {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+  &-elem {
     position: absolute;
-    // top: 0;
-    // left: -9999px;
+    top: 0;
+    left: -9999px;
   }
+  &-fake {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 11px;
+  }
+  // &-fake::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   width: 0;
+  //   height: 0;
+  //   border-radius: 50%;
+  //   background: $red;
+  // }
+}
+
+// .delivery__radio-elem:checked+.delivery__radio-fake{
+//   width: 5px;
+//   height: 5px;
+// }
+
+.input-small{
+  width: 7.14em;
+}
+.input-orig{
+  width: 15.71em;
+}
+.input-large{
+  width: 32.86em;
 }
