@@ -1,0 +1,34 @@
+.we {
+  background: url('../img/bg/bg.png') no-repeat center center / cover;
+  &__title {
+    padding-top: 115px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+.features {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    flex:1;
+    text-align: center;
+    margin-right: 30px;
+  &:last-child{
+    margin-right: 0;
+  }
+  }
+  &__img {
+    margin-bottom: 40px;
+  }
+  &__title {
+    @include lifehack($black,
+    24px);
+    margin-bottom: 30px;
+  }
+  &__text {
+    line-height: 22px;
+    color: $black-alfa;
+  }
+}

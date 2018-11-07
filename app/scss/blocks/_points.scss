@@ -1,0 +1,44 @@
+%pseudo {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: block;
+}
+
+.points {
+  &__list {
+    position: fixed;
+    top: 90px;
+    right: 49px;
+  }
+  &__item {
+    margin-bottom: 16px;
+  }
+  &__link {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    display: block;
+    &::before {
+      @extend %pseudo;
+      width: 6px;
+      height: 6px;
+      background: #fff;
+    }
+    &::after {
+      @extend %pseudo;
+      width: 0px;
+      height: 0px;
+      border: 1px solid #fff;
+      opacity: 0;
+    }
+    &-active::after {
+      width: 16px;
+      height: 16px;
+      opacity: 1;
+    }
+  }
+}

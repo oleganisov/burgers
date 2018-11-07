@@ -1,0 +1,28 @@
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  &__item {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+    margin-right: 16px;
+    &::after {
+      content: '\2022';
+      color: #fff;
+      padding-left: 16px;
+    }
+    &:last-child::after{
+      display: none;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__link {
+    color: #fff;
+  }
+}
