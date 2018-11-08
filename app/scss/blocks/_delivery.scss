@@ -52,23 +52,23 @@
     background-color: #fff;
     margin-right: 0.8em;
   }
-  // &-fake::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   width: 0;
-  //   height: 0;
-  //   border-radius: 50%;
-  //   background: $red;
-  // }
+  &-fake::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: $red;
+  }
 }
 
-// .delivery__radio-elem:checked+.delivery__radio-fake{
-//   width: 5px;
-//   height: 5px;
-// }
+.delivery__radio-elem:checked+.delivery__radio-fake::after{
+  width: 0.5em;
+  height: 0.5em;
+}
 .delivery__chbox{
   display: flex;
   cursor: pointer;
