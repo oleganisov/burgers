@@ -6,7 +6,7 @@
     margin-bottom: 8%;
   }
   &__pic {
-    margin-right: 15px;
+    margin-right: 3%;
     flex: 1;
   }
   &__img {
@@ -18,14 +18,14 @@
     padding-top: 8%;
   }
   &__tittle {
-    margin-bottom: 25px;
+    margin-bottom: 5%;
   }
   &__text {
     @include lifehack;
-    line-height: 55px;
+    line-height: 0.9em;
   }
 }
 
 .next-screen {
-  margin-bottom: 40px;
+  margin-bottom: 4%;
 }

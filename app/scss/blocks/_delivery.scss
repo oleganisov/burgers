@@ -1,32 +1,28 @@
 .delivery {
   background: url('../img/bg/delivery-bg.png') no-repeat center center / cover;
   &__title{
-    margin-bottom: 56px;
+    margin-bottom: 10%;
   }
   &__content {
     display: flex;
     justify-content: center;
     color: #fff;
   }
-  &__left,
-  &__right {
-    // flex-shrink: 1;
-  }
   &__row {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 1.43em;
   }
   &__input {
-    margin-right: 20px;
+    margin-right: 1.43em;
   }
   &__input-title {
-    margin-bottom: 10px;
+    margin-bottom: 0.71em;
   }
   &__input-text {
-    height: 35px;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    padding-left: 20px;
+    height: 2.5em;
+    border: 0.14em solid transparent;
+    border-radius: 0.36em;
+    padding-left: 1.43em;
   }
   &__textarea {
     resize: none;
@@ -35,15 +31,14 @@
   }
   &__input-text:focus {
     outline: none;
-    border: 2px solid $yellow;
+    border: 0.14em solid $yellow;
   }
 }
 
 .delivery__radio {
   display: flex;
-  position: relative;
   cursor: pointer;
-  margin-right: 20px;
+  margin-right: 1.43em;
   &-elem {
     position: absolute;
     top: 0;
@@ -51,11 +46,11 @@
   }
   &-fake {
     position: relative;
-    width: 14px;
-    height: 14px;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
-    border: 1px solid #fff;
-    margin-right: 11px;
+    background-color: #fff;
+    margin-right: 0.8em;
   }
   // &-fake::after {
   //   content: "";
@@ -74,6 +69,22 @@
 //   width: 5px;
 //   height: 5px;
 // }
+.delivery__chbox{
+  display: flex;
+  cursor: pointer;
+  &-elem{
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+  &-fake{
+    width: 1em;
+    height: 1em;
+    background-color: #fff;
+    margin-right: 0.8em;
+  }
+
+}
 
 .input-small{
   width: 7.14em;

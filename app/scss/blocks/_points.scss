@@ -9,40 +9,38 @@
 }
 
 .points {
-  &__list {
-    position: fixed;
-    top: 90px;
-    right: 49px;
-  }
+  position: fixed;
+  top: 15%;
+  right: 5%;
   &__item {
-    margin-bottom: 16px;
+    margin-bottom: 1.14em;
   }
   &__link {
     position: relative;
-    width: 6px;
-    height: 6px;
+    width: 0.43em;
+    height: 0.43em;
     display: block;
     &::before {
       @extend %pseudo;
-      width: 6px;
-      height: 6px;
+      width: 0.43em;
+      height: 0.43em;
       background: #fff;
     }
     &::after {
       @extend %pseudo;
-      width: 0px;
-      height: 0px;
-      border: 1px solid #fff;
+      width: 0;
+      height: 0;
+      border: 0.07em solid #fff;
       opacity: 0;
     }
     &-active::after {
-      width: 16px;
-      height: 16px;
+      width: 1.14em;
+      height: 1.14em;
       opacity: 1;
     }
     &:hover::after{
-      width: 16px;
-      height: 16px;
+      width: 1.14em;
+      height: 1.14em;
       opacity: 1;
     }
   }

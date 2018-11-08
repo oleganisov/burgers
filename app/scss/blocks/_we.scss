@@ -1,8 +1,7 @@
 .we {
   background: url('../img/bg/bg.png') no-repeat center center / cover;
   &__title {
-    // text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 8%;
   }
 }
 
@@ -15,22 +14,22 @@
     flex-direction: column;
     flex: 1;
     text-align: center;
-    margin-right: 30px;
+    margin-right: 3%;
     &:last-child {
       margin-right: 0;
     }
   }
   &__img {
     height: 5rem;
-    margin-bottom: 40px;
+    margin-bottom: 18%;
   }
   &__title {
     @include lifehack($black,
-    24px);
-    margin-bottom: 30px;
+    1.71em);
+    margin-bottom: 10%;
   }
   &__text {
-    line-height: 22px;
+    line-height: 1.57em;
     color: $black-alfa;
   }
 }
