@@ -38,6 +38,7 @@
 .delivery__radio {
   display: flex;
   cursor: pointer;
+  position: relative;
   margin-right: 1.43em;
   &-elem {
     position: absolute;
@@ -71,6 +72,7 @@
 }
 .delivery__chbox{
   display: flex;
+  position: relative;
   cursor: pointer;
   &-elem{
     position: absolute;
@@ -78,12 +80,25 @@
     left: -9999px;
   }
   &-fake{
+    position: relative;
     width: 1em;
     height: 1em;
     background-color: #fff;
+    fill: $red;
     margin-right: 0.8em;
   }
+  &-fake::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1em;
+    height: 1em;
+    background: url('../img/icons/sprite.svg#check');
+    fill: $red;
 
+  }
 }
 
 .input-small{
