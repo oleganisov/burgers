@@ -1,14 +1,16 @@
 .btn {
   padding: 0.71em 1.07em;
-  text-transform: uppercase;
   color: #fff;
   border-radius: 0.36em;
-  font-weight: 500;
   display: inline-block;
   &-red{
     background: $red;
+    text-transform: uppercase;
+    font-weight: 500;
   }
   &-black{
     background: $black;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 }

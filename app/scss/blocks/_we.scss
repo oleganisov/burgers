@@ -20,8 +20,12 @@
     }
   }
   &__img {
-    height: 5rem;
+    height: 7rem;
     margin-bottom: 18%;
+  }
+  &__pic {
+    height: 100%;
+    width: 100%;
   }
   &__title {
     @include lifehack($black,

@@ -84,7 +84,6 @@
     width: 1em;
     height: 1em;
     background-color: #fff;
-    fill: $red;
     margin-right: 0.8em;
   }
   &-fake::after {
@@ -93,12 +92,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1em;
-    height: 1em;
-    background: url('../img/icons/sprite.svg#check');
-    fill: $red;
-
+    width: 0.78em;
+    height: 0.64em;
+    background: center transparent no-repeat;
+    background-size: contain;
   }
+}
+.delivery__chbox-elem:checked+.delivery__chbox-fake::after{
+  background-image: url('../img/icons/check.svg');
 }
 
 .input-small{
