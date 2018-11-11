@@ -19,10 +19,10 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
 	return gulp.src('app/scss/*.scss')
 	.pipe(wait(2000))
-	.pipe(sourcemaps.init({loadMaps: true}))
+	//.pipe(sourcemaps.init({loadMaps: true}))
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(sourcemaps.write())
+	//.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browsersync.reload( {stream: true} ));
 });
