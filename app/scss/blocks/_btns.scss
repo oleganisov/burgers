@@ -1,7 +1,7 @@
 .btn {
-  padding: 0.71em 1.07em;
+  padding: rem(10px) rem(15px);
   color: #fff;
-  border-radius: 0.36em;
+  border-radius: rem(5px);
   display: inline-block;
   &-red{
     background: $red;
@@ -14,3 +14,4 @@
     font-weight: 500;
   }
 }
+

@@ -5,8 +5,11 @@
   &-black {
     @include gagalin($black);
   }
+  &-white {
+    @include gagalin(#fff);
+  }
   &-h4 {
     @include gagalin(#fff);
-    font-size: 1em;
+    font-size: rem(14px);;
   }
 }

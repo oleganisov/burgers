@@ -3,10 +3,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.86em;
+  margin-top: rem(12px);
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablets{
+      display: none;
+    }
+    @include phones{
+      display: none;
+    }
   }
+  &__logo{
+    @include tablets{
+      margin-top: rem(10px);
+    }
+  }
+  &__order{
+    @include tablets{
+    margin-right: 10%;
+    }
+  }
+
 }

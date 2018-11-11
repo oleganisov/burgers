@@ -3,8 +3,12 @@ $yellow: #f9b43b;
 $red: #e45028;
 $black:rgb(47, 50, 52);
 $black-alfa:rgba(47, 50, 52, 0.8);
+//breakpoints
+$tablets:768px;
+$phones:480px;
 // setup
 @import "./fonts";
+@import "./media";
 @import "./mixin";
 @import "./layouts/base";
 // blocks
@@ -14,7 +18,11 @@ $black-alfa:rgba(47, 50, 52, 0.8);
 @import "./blocks/header";
 @import "./blocks/nav";
 @import "./blocks/we";
+@import "./blocks/team";
+@import "./blocks/menu";
 @import "./blocks/reviews";
 @import "./blocks/delivery";
 @import "./blocks/slider";
+@import "./blocks/map";
+@import "./blocks/footer";
 @import "./blocks/points";

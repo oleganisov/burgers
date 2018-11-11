@@ -1,37 +1,49 @@
 .delivery {
   background: url('../img/bg/delivery-bg.png') no-repeat center center / cover;
-  &__title{
+  &__title {
     margin-bottom: 10%;
+    text-align: center;
+    @include phones {
+      font-size: rem(50px);
+    }
   }
   &__content {
     display: flex;
     justify-content: center;
     color: #fff;
+    @include tablets {
+      flex-direction: column;
+    }
   }
   &__row {
     display: flex;
-    margin-bottom: 1.43em;
+    margin-bottom: rem(20px);
   }
   &__input {
-    margin-right: 1.43em;
+    margin-right: rem(20px);
   }
   &__input-title {
-    margin-bottom: 0.71em;
+    margin-bottom: rem(10px);
   }
   &__input-text {
-    height: 2.5em;
-    border: 0.14em solid transparent;
-    border-radius: 0.36em;
-    padding-left: 1.43em;
+    height: rem(35px);
+    border: rem(2px) solid transparent;
+    border-radius: rem(5px);
+    padding-left: rem(20px);
   }
   &__textarea {
     resize: none;
-    width: 32.86em;
-    height: 7.71em;
+    width: rem(460px);
+    height: rem(108px);
   }
   &__input-text:focus {
     outline: none;
-    border: 0.14em solid $yellow;
+    border: rem(2px) solid $yellow;
+  }
+  &-floor {
+    @include phones {
+      display: none;
+    }
   }
 }
 
@@ -39,7 +51,7 @@
   display: flex;
   cursor: pointer;
   position: relative;
-  margin-right: 1.43em;
+  margin-right: rem(20px);
   &-elem {
     position: absolute;
     top: 0;
@@ -47,11 +59,11 @@
   }
   &-fake {
     position: relative;
-    width: 1em;
-    height: 1em;
+    width: rem(14px);
+    height: rem(14px);
     border-radius: 50%;
     background-color: #fff;
-    margin-right: 0.8em;
+    margin-right: rem(11px);
   }
   &-fake::after {
     content: "";
@@ -63,28 +75,30 @@
     height: 0;
     border-radius: 50%;
     background: $red;
+    transition: .3s;
   }
 }
 
-.delivery__radio-elem:checked+.delivery__radio-fake::after{
-  width: 0.5em;
-  height: 0.5em;
+.delivery__radio-elem:checked+.delivery__radio-fake::after {
+  width: rem(7px);
+  height: rem(7px);
 }
-.delivery__chbox{
+
+.delivery__chbox {
   display: flex;
   position: relative;
   cursor: pointer;
-  &-elem{
+  &-elem {
     position: absolute;
     top: 0;
     left: -9999px;
   }
-  &-fake{
+  &-fake {
     position: relative;
-    width: 1em;
-    height: 1em;
+    width: rem(14px);
+    height: rem(14px);
     background-color: #fff;
-    margin-right: 0.8em;
+    margin-right: rem(11px);
   }
   &-fake::after {
     content: "";
@@ -92,22 +106,39 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 0.78em;
-    height: 0.64em;
+    width: rem(11px);
+    height: rem(9px);
     background: center transparent no-repeat;
     background-size: contain;
   }
 }
-.delivery__chbox-elem:checked+.delivery__chbox-fake::after{
+
+.delivery__chbox-elem:checked+.delivery__chbox-fake::after {
   background-image: url('../img/icons/check.svg');
 }
 
-.input-small{
-  width: 7.14em;
+.input-small {
+  width: rem(100px);
+  @include phones {
+    width: rem(140px);
+  }
 }
-.input-orig{
-  width: 15.71em;
+
+.input-orig {
+  width: rem(220px);
 }
-.input-large{
-  width: 32.86em;
+
+.input-large {
+  width: rem(460px);
+}
+.row-center{
+  @include phones{
+    justify-content: center;
+    margin-bottom: rem(40px);
+  }
+}
+.area-margin{
+  @include phones{
+    margin-bottom: rem(40px);
+  }
 }

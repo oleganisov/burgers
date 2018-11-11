@@ -1,0 +1,60 @@
+.menu {
+  position: relative;
+  background: url('../img/bg/menu-bg.png') no-repeat center center / cover;
+  &__title {
+    margin: rem(113px) 0 0 rem(73px);
+  }
+}
+
+.accordeon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  &__item {
+    display: flex;
+    height: 100%;
+  }
+  &__link {
+    height: 100%;
+    width: rem(80px);
+    display: flex;
+    align-items: flex-end;
+    @include gagalin(#fff);
+    font-size: rem(40px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &__block {
+    white-space: nowrap;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+  }
+  &__expand {
+    overflow: hidden;
+    height: 100%;
+    width: 0;
+    background: $black-alfa;
+    color: #fff;
+    line-height: rem(40px);
+  }
+  &__txt {
+    padding: rem(60px) rem(30px);
+  }
+}
+
+.accordeon__item.is-active .accordeon__expand {
+  width: rem(550px);
+  @include tablets{
+    width: rem(300px);
+    line-height: rem(30px);
+  }
+}
+
+.accordeon__item.is-active .accordeon__link {
+  @include gagalin($yellow);
+  font-size: rem(40px);
+}

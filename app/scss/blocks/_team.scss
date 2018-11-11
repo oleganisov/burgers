@@ -1,0 +1,122 @@
+.team {
+  background: url('../img/bg/team.png') no-repeat center center / cover;
+  position: relative;
+  &__nav {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $black;
+    opacity: 0.9;
+    @include tablets {
+      width: 100%;
+      // left: 0;
+    }
+  }
+  &__title {
+    @include tablets {
+      font-size: rem(50px);
+      margin-bottom: rem(55px);
+    }
+  }
+  &__menu {
+    padding: rem(55px) rem(95px) 0 rem(100px);
+    @include tablets {
+      padding: 0 rem(56px);
+    }
+  }
+  &__list {
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &__item {
+    margin-bottom: rem(20px);
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__row {
+    text-align: left;
+    margin-bottom: rem(40px);
+  }
+  &__link {
+    display: flex;
+    @include gagalin(#fff);
+    font-size: rem(14px);
+    position: relative;
+    @include tablets {
+      font-size: rem(25px);
+      justify-content: center;
+    }
+  }
+  &__expand {
+    display: flex;
+    color: #fff;
+    height: 0;
+    overflow: hidden;
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__pic {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;
+    height: rem(100px);
+    width: rem(100px);
+    justify-content: center;
+    margin-right: rem(22px);
+    @include tablets {
+      margin-right: initial;
+      margin-bottom: rem(25px);
+    }
+  }
+  &__img {
+    height: 100%;
+  }
+  &__desc {
+    text-align: left;
+    @include tablets{
+      text-align: center;
+    }
+  }
+
+.team__item.is-active .team__link {
+  color: $yellow;
+}
+
+.team__item.is-active .team__expand {
+  height: rem(150px);
+  @include tablets {
+    height: rem(220px);
+  }
+}
+
+.team__item.is-active .link-ico {
+  transform: rotate(180deg);
+}
+
+.link-ico {
+  margin-right: rem(10px);
+}
+
+.desc-title {
+  font-weight: 700;
+  margin-bottom: rem(25px);
+}
+
+.desc-text {
+  line-height: rem(24px);
+}
+}

@@ -11,37 +11,42 @@
 .points {
   position: fixed;
   top: 15%;
-  right: 5%;
+  right: 3%;
+  @include tablets{
+    display: none;
+  }
   &__item {
-    margin-bottom: 1.14em;
+    margin-bottom: rem(16px);
   }
   &__link {
     position: relative;
-    width: 0.43em;
-    height: 0.43em;
+    width: rem(6px);
+    height: rem(6px);
     display: block;
     &::before {
       @extend %pseudo;
-      width: 0.43em;
-      height: 0.43em;
+      width: rem(6px);
+      height: rem(6px);
       background: #fff;
     }
     &::after {
       @extend %pseudo;
       width: 0;
       height: 0;
-      border: 0.07em solid #fff;
+      border: rem(1px) solid #fff;
       opacity: 0;
-    }
-    &-active::after {
-      width: 1.14em;
-      height: 1.14em;
-      opacity: 1;
+      transition: .3s;
     }
     &:hover::after{
-      width: 1.14em;
-      height: 1.14em;
+      width: rem(16px);
+      height: rem(16px);
       opacity: 1;
     }
   }
+}
+
+.points__item.is-active .points__link::after{
+    width: rem(16px);
+    height: rem(16px);
+    opacity: 1;
 }

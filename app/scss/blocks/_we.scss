@@ -2,12 +2,19 @@
   background: url('../img/bg/bg.png') no-repeat center center / cover;
   &__title {
     margin-bottom: 8%;
+    @include phones{
+      font-size: rem(50px);
+      margin-top: 15%;
+    }
   }
 }
 
 .features {
   &__list {
     display: flex;
+    @include phones{
+      flex-direction: column;
+    }
   }
   &__item {
     display: flex;
@@ -18,22 +25,30 @@
     &:last-child {
       margin-right: 0;
     }
-  }
-  &__img {
-    height: 7rem;
-    margin-bottom: 18%;
+    @include phones{
+      flex-direction: row;
+      margin-right: initial;
+      text-align: left;
+    }
   }
   &__pic {
     height: 100%;
     width: 100%;
+    @include phones{
+    width: rem(150px);
+    }
+  }
+  &__img {
+    height: rem(98px);
+    margin-bottom: 18%;
   }
   &__title {
     @include lifehack($black,
-    1.71em);
+    rem(24px));
     margin-bottom: 10%;
   }
   &__text {
-    line-height: 1.57em;
+    line-height: rem(22px);
     color: $black-alfa;
   }
 }
