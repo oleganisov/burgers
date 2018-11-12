@@ -4,7 +4,7 @@
     margin-bottom: 10%;
     text-align: center;
     @include phones {
-      font-size: rem(50px);
+      font-size: rem(35px);
     }
   }
   &__content {
@@ -15,17 +15,33 @@
       flex-direction: column;
     }
   }
+  &__left{
+    flex: 1;
+    margin-right: rem(20px);
+    @include tablets {
+      margin-right: initial;
+    }
+  }
+  &__right{
+   flex: 1;
+  }
   &__row {
     display: flex;
     margin-bottom: rem(20px);
   }
   &__input {
-    margin-right: rem(20px);
+    width: 100%;
+    flex:1;
+    margin-left: rem(20px);
+    &:first-child{
+      margin-left: 0;
+    }
   }
   &__input-title {
     margin-bottom: rem(10px);
   }
   &__input-text {
+    width: 100%;
     height: rem(35px);
     border: rem(2px) solid transparent;
     border-radius: rem(5px);
@@ -33,7 +49,6 @@
   }
   &__textarea {
     resize: none;
-    width: rem(460px);
     height: rem(108px);
   }
   &__input-text:focus {
@@ -44,6 +59,10 @@
     @include phones {
       display: none;
     }
+  }
+  &__textarea-label{
+    width: 100%;
+    flex: 1;
   }
 }
 
@@ -117,28 +136,14 @@
   background-image: url('../img/icons/check.svg');
 }
 
-.input-small {
-  width: rem(100px);
-  @include phones {
-    width: rem(140px);
-  }
-}
-
-.input-orig {
-  width: rem(220px);
-}
-
-.input-large {
-  width: rem(460px);
-}
 .row-center{
   @include phones{
     justify-content: center;
-    margin-bottom: rem(40px);
+    margin-bottom: rem(30px);
   }
 }
 .area-margin{
   @include phones{
-    margin-bottom: rem(40px);
+    margin-bottom: rem(30px);
   }
 }

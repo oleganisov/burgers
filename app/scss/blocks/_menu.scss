@@ -19,7 +19,7 @@
   }
   &__link {
     height: 100%;
-    width: rem(80px);
+    width: rem(70px);
     display: flex;
     align-items: flex-end;
     @include gagalin(#fff);
@@ -29,6 +29,7 @@
     background-repeat: no-repeat;
   }
   &__block {
+    line-height: rem(70px);
     white-space: nowrap;
     transform-origin: 0 0;
     transform: rotate(-90deg);
@@ -49,7 +50,7 @@
 .accordeon__item.is-active .accordeon__expand {
   width: rem(550px);
   @include tablets{
-    width: rem(300px);
+    width: 100%;
     line-height: rem(30px);
   }
 }
