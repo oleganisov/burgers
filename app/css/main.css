@@ -104,6 +104,12 @@ body {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
 .container--first {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
