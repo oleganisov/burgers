@@ -47,7 +47,9 @@ body {
   &--first {
     justify-content: space-between;
   }
-  // &
+  &--slider{
+    flex-direction: row;
+  }
 }
 
 ul li {

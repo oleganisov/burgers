@@ -1,0 +1,23 @@
+.slider {
+  background-color:$yellow;
+  &__content{
+    display: flex;
+    position: relative;
+  }
+  &__pic,&__desc{
+    flex:1;
+  }
+  &__text{
+    color: #fff;
+  }
+}
+.ico-top{
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.ico-bottom{
+  position: absolute;
+  bottom:0;
+  left: 0;
+}

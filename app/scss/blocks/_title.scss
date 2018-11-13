@@ -8,6 +8,9 @@
   &-white {
     @include gagalin(#fff);
   }
+  &-red {
+    @include gagalin($red);
+  }
   &-h4 {
     @include gagalin(#fff);
     font-size: rem(14px);;

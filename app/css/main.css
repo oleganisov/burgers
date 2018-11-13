@@ -117,6 +117,14 @@ body {
           justify-content: space-between;
 }
 
+.container--slider {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 ul li {
   list-style: none;
 }
@@ -167,6 +175,13 @@ button {
   font-family: Gagalin;
   font-size: 5.14286rem;
   color: #fff;
+  font-weight: normal;
+}
+
+.title-red {
+  font-family: Gagalin;
+  font-size: 5.14286rem;
+  color: #e45028;
   font-weight: normal;
 }
 
@@ -1155,6 +1170,41 @@ button {
   .area-margin {
     margin-bottom: 2.14286rem;
   }
+}
+
+.slider {
+  background-color: #f9b43b;
+}
+
+.slider__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.slider__pic, .slider__desc {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.slider__text {
+  color: #fff;
+}
+
+.ico-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ico-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .map {
