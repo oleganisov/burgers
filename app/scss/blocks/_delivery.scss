@@ -1,0 +1,149 @@
+.delivery {
+  background: url('../img/bg/delivery-bg.png') no-repeat center center / cover;
+  &__title {
+    margin-bottom: 10%;
+    text-align: center;
+    @include phones {
+      font-size: rem(35px);
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+  &__left{
+    flex: 1;
+    margin-right: rem(20px);
+    @include tablets {
+      margin-right: initial;
+    }
+  }
+  &__right{
+   flex: 1;
+  }
+  &__row {
+    display: flex;
+    margin-bottom: rem(20px);
+  }
+  &__input {
+    width: 100%;
+    flex:1;
+    margin-left: rem(20px);
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__input-title {
+    margin-bottom: rem(10px);
+  }
+  &__input-text {
+    width: 100%;
+    height: rem(35px);
+    border: rem(2px) solid transparent;
+    border-radius: rem(5px);
+    padding-left: rem(20px);
+  }
+  &__textarea {
+    resize: none;
+    height: rem(108px);
+  }
+  &__input-text:focus {
+    outline: none;
+    border: rem(2px) solid $yellow;
+  }
+  &-floor {
+    @include phones {
+      display: none;
+    }
+  }
+  &__textarea-label{
+    width: 100%;
+    flex: 1;
+  }
+}
+
+.delivery__radio {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  margin-right: rem(20px);
+  &-elem {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+  &-fake {
+    position: relative;
+    width: rem(14px);
+    height: rem(14px);
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: rem(11px);
+  }
+  &-fake::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: $red;
+    transition: .3s;
+  }
+}
+
+.delivery__radio-elem:checked+.delivery__radio-fake::after {
+  width: rem(7px);
+  height: rem(7px);
+}
+
+.delivery__chbox {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  &-elem {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+  &-fake {
+    position: relative;
+    width: rem(14px);
+    height: rem(14px);
+    background-color: #fff;
+    margin-right: rem(11px);
+  }
+  &-fake::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(11px);
+    height: rem(9px);
+    background: center transparent no-repeat;
+    background-size: contain;
+  }
+}
+
+.delivery__chbox-elem:checked+.delivery__chbox-fake::after {
+  background-image: url('../img/icons/check.svg');
+}
+
+.row-center{
+  @include phones{
+    justify-content: center;
+    margin-bottom: rem(30px);
+  }
+}
+.area-margin{
+  @include phones{
+    margin-bottom: rem(30px);
+  }
+}

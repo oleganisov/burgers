@@ -1,34 +1,54 @@
 .we {
   background: url('../img/bg/bg.png') no-repeat center center / cover;
   &__title {
-    padding-top: 115px;
-    text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 8%;
+    @include phones{
+      font-size: rem(50px);
+      margin-top: 15%;
+    }
   }
 }
 
 .features {
   &__list {
     display: flex;
+    @include phones{
+      flex-direction: column;
+    }
   }
   &__item {
-    flex:1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     text-align: center;
-    margin-right: 30px;
-  &:last-child{
-    margin-right: 0;
+    margin-right: 3%;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include phones{
+      flex-direction: row;
+      margin-right: initial;
+      text-align: left;
+    }
   }
+  &__pic {
+    height: 100%;
+    width: 100%;
+    @include phones{
+    width: rem(150px);
+    }
   }
   &__img {
-    margin-bottom: 40px;
+    height: rem(98px);
+    margin-bottom: 18%;
   }
   &__title {
     @include lifehack($black,
-    24px);
-    margin-bottom: 30px;
+    rem(24px));
+    margin-bottom: 10%;
   }
   &__text {
-    line-height: 22px;
+    line-height: rem(22px);
     color: $black-alfa;
   }
 }

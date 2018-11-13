@@ -9,36 +9,44 @@
 }
 
 .points {
-  &__list {
-    position: fixed;
-    top: 90px;
-    right: 49px;
+  position: fixed;
+  top: 15%;
+  right: 3%;
+  @include tablets{
+    display: none;
   }
   &__item {
-    margin-bottom: 16px;
+    margin-bottom: rem(16px);
   }
   &__link {
     position: relative;
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     display: block;
     &::before {
       @extend %pseudo;
-      width: 6px;
-      height: 6px;
+      width: rem(6px);
+      height: rem(6px);
       background: #fff;
     }
     &::after {
       @extend %pseudo;
-      width: 0px;
-      height: 0px;
-      border: 1px solid #fff;
+      width: 0;
+      height: 0;
+      border: rem(1px) solid #fff;
       opacity: 0;
+      transition: .3s;
     }
-    &-active::after {
-      width: 16px;
-      height: 16px;
+    &:hover::after{
+      width: rem(16px);
+      height: rem(16px);
       opacity: 1;
     }
   }
+}
+
+.points__item.is-active .points__link::after{
+    width: rem(16px);
+    height: rem(16px);
+    opacity: 1;
 }

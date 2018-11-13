@@ -1,19 +1,18 @@
-.menu {
+.nav {
   &__list {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 2%;
   }
   &__item {
     text-transform: uppercase;
     font-weight: 500;
     font-style: normal;
-    font-size: 13px;
-    margin-right: 16px;
+    font-size: rem(13px);
     &::after {
       content: '\2022';
       color: #fff;
-      padding-left: 16px;
+      margin: 0 rem(15px);
     }
     &:last-child::after{
       display: none;
@@ -24,5 +23,42 @@
   }
   &__link {
     color: #fff;
+  }
+}
+.nav-btn{
+  display: none;
+  position: fixed;
+  right: 3%;
+  top: 6%;
+  width: rem(25px);
+  height: rem(23px);
+  cursor: pointer;
+  @include tablets{
+    display: initial;
+  }
+}
+%ham_line{
+  background: #fff;
+  border-radius: rem(3px);
+  height: rem(4px);
+  width: rem(24px);
+}
+
+.hamburger-bar{
+  @extend %ham_line;
+  &::before{
+    content: "";
+    @extend %ham_line;
+    display: block;
+    position:absolute;
+    top: rem(9.6px);
+    margin-right: 4px;
+  }
+  &::after{
+    content: "";
+    @extend %ham_line;
+    display: block;
+    position: absolute;
+    bottom: 0;
   }
 }
