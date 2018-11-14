@@ -1173,7 +1173,10 @@ button {
 }
 
 .slider {
-  background-color: #f9b43b;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
+  background: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
 }
 
 .slider__content {
@@ -1199,6 +1202,12 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  height: 6.42857rem;
+  width: 6.42857rem;
+  opacity: 0.4;
+  background-color: #e35028;
+  -webkit-border-radius: 0.35714rem;
+          border-radius: 0.35714rem;
 }
 
 .ico-bottom {

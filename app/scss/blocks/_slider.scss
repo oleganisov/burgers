@@ -1,5 +1,5 @@
 .slider {
-  background-color:$yellow;
+  background:linear-gradient(0deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
   &__content{
     display: flex;
     position: relative;
@@ -15,6 +15,11 @@
   position: absolute;
   top:0;
   left: 0;
+  height: rem(90px);
+  width: rem(90px);
+  opacity: 0.4;
+  background-color: rgb(227, 80, 40);
+  border-radius: rem(5px);
 }
 .ico-bottom{
   position: absolute;
