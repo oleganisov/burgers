@@ -1,28 +1,135 @@
 .slider {
-  background:linear-gradient(0deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-  &__content{
+  background: linear-gradient(0deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
+  &__prev {
+    cursor: pointer;
+    margin-right: rem(25px);
+    @include tablets{
+      margin-right: initial;
+    }
+  }
+  &__content {
     display: flex;
     position: relative;
+    margin-right: rem(25px);
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
+      margin-right: initial;
+      align-self: flex-end;
+      margin-bottom: 5%;
+    }
   }
-  &__pic,&__desc{
-    flex:1;
+  &__next{
+    cursor: pointer;
   }
-  &__text{
+  &__pic {
+    flex: 1;
+    align-self: center;
+  }
+  &__img{
+    @include tablets {
+      max-width: 85%;
+      max-height: 85%;
+    }
+  }
+  &__desc {
+    flex: 1;
+  }
+  &__title {
+    line-height: rem(65px);
+    margin-bottom: rem(55px);
+    @include tablets{
+      margin-bottom: rem(30px);
+      line-height: rem(45px);
+    }
+    @include phones{
+      font-size: rem(50px);
+      line-height: rem(50px);
+    }
+  }
+  &__text {
     color: #fff;
+    line-height: rem(24px);
+    margin-bottom: rem(25px);
+  }
+  &__icon-text {
+    @include gagalin(#fff);
+    font-size: rem(14px);
+  }
+  &__order {
+    display: flex;
+    align-items: baseline;
+    @include tablets {
+      justify-content: center;
+    }
   }
 }
-.ico-top{
+
+.ico-top {
   position: absolute;
-  top:0;
-  left: 0;
+  top: -14%;
+  left: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1% 0;
   height: rem(90px);
   width: rem(90px);
-  opacity: 0.4;
-  background-color: rgb(227, 80, 40);
+  background-color: rgba(227, 80, 40, 0.4);
   border-radius: rem(5px);
+  @include tablets {
+    top: -5%;
+  }
+  @include phones{
+    background-color: transparent;
+    top: -15%;
+    left: -10%;
+  }
 }
-.ico-bottom{
+
+.ico-bottom {
   position: absolute;
-  bottom:0;
-  left: 0;
+  bottom: -10%;
+  left: 4%;
+  text-align: center;
+  opacity: 0.5;
+  @include tablets {
+    left: initial;
+    bottom: initial;
+    top: -5%;
+    right: 5%;
+
+  }
+  @include phones{
+    top: -15%;
+    right: 2%;
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
+.text-big {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: rem(20px);
+}
+
+.order {
+  &-price {
+    margin-right: rem(10px);
+    @include phones{
+      font-size: (50px);
+    }
+  }
+  &-currency {
+    @include gagalin($red);
+    font-size: rem(30px);
+    margin-right: rem(30px);
+    @include phones{
+      font-size: rem(24px);
+    }
+  }
 }
