@@ -55,6 +55,7 @@
   &__icon-text {
     @include gagalin(#fff);
     font-size: rem(14px);
+    letter-spacing: rem(1px);
   }
   &__order {
     display: flex;
