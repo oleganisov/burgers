@@ -18,6 +18,9 @@ body {
   position: relative;
   height: 100%;
 }
+.is-locked{
+  overflow: hidden;
+}
 
 .wrapper {
   height: 100%;
@@ -46,10 +49,6 @@ body {
   }
   &--first {
     justify-content: space-between;
-  }
-  &--slider{
-    max-width: rem(1010px);
-    flex-direction: row;
   }
 }
 

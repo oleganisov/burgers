@@ -1,56 +1,99 @@
 .slider {
   background: linear-gradient(0deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
   &__prev {
+    position: absolute;
     cursor: pointer;
-    margin-right: rem(25px);
-    @include tablets{
-      margin-right: initial;
-    }
-  }
-  &__content {
+    z-index: 1;
+    left: 0;
+    height: 20%;
     display: flex;
-    position: relative;
-    margin-right: rem(25px);
-    @include tablets {
-      flex-direction: column;
-      text-align: center;
-      margin-right: initial;
-      align-self: flex-end;
-      margin-bottom: 5%;
-    }
+    align-items: center;
   }
   &__next{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    height: 20%;
+    display: flex;
+    align-items: center;
     cursor: pointer;
   }
-  &__pic {
+  &__elems{
+    display: flex;
+    overflow: hidden;
+    width: rem(940px);
+    @include tablets{
+      width: rem(768px);
+      height: 95%;
+    }
+    @include phones{
+      width: rem(480px);
+    }
+  }
+  &__list{
+    display: flex;
+    position: relative;
+    right: 0;
+    transition: right .2s;
+  }
+  &__item {
+    display: flex;
+    width: rem(940px);
     flex: 1;
-    align-self: center;
+    position: relative;
+    @include tablets {
+      width: rem(768px);
+      flex-direction: column;
+      text-align: center;
+      align-self: flex-end;
+    }
+    @include phones{
+      width: rem(480px);
+    }
+  }
+  &__pic {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
   }
   &__img{
+    max-width: 95%;
     @include tablets {
-      max-width: 85%;
-      max-height: 85%;
+      max-width: 65%;
+    }
+    @include phones {
+      max-width: 50%;
     }
   }
   &__desc {
     flex: 1;
+    @include phones {
+      padding: 0 15%;
+    }
   }
   &__title {
     line-height: rem(65px);
     margin-bottom: rem(55px);
     @include tablets{
+      font-size: rem(50px);
       margin-bottom: rem(30px);
       line-height: rem(45px);
     }
     @include phones{
-      font-size: rem(50px);
-      line-height: rem(50px);
+      font-size: rem(45px);
+      line-height: rem(45px);
+      margin-bottom: rem(20px);
     }
   }
   &__text {
     color: #fff;
     line-height: rem(24px);
     margin-bottom: rem(25px);
+    @include phones{
+      line-height: rem(20px);
+      margin-bottom: rem(15px);
+    }
   }
   &__icon-text {
     @include gagalin(#fff);
@@ -66,10 +109,11 @@
   }
 }
 
-.ico-top {
+.ico-recipe {
   position: absolute;
-  top: -14%;
-  left: 4%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,35 +122,34 @@
   height: rem(90px);
   width: rem(90px);
   background-color: rgba(227, 80, 40, 0.4);
+  transition: background-color .3s;
   border-radius: rem(5px);
-  @include tablets {
-    top: -5%;
+  &:hover{
+    background-color: rgba(227, 80, 40, 1);
+  }
+  @include tablets{
+    top: 0;
+    left: 15%;
   }
   @include phones{
-    background-color: transparent;
-    top: -15%;
-    left: -10%;
+    top: -20%;
   }
 }
 
-.ico-bottom {
+.ico-weight {
   position: absolute;
-  bottom: -10%;
-  left: 4%;
+  bottom: 0;
+  left: 0;
   text-align: center;
   opacity: 0.5;
   @include tablets {
     left: initial;
     bottom: initial;
-    top: -5%;
-    right: 5%;
-
+    top: 0;
+    right: 15%;
   }
   @include phones{
-    top: -15%;
-    right: 2%;
-    max-width: 80%;
-    max-height: 80%;
+    top: -20%;
   }
 }
 
@@ -121,8 +164,8 @@
 .order {
   &-price {
     margin-right: rem(10px);
-    @include phones{
-      font-size: (50px);
+    @include tablets{
+      font-size: rem(50px);
     }
   }
   &-currency {
@@ -133,4 +176,13 @@
       font-size: rem(24px);
     }
   }
+}
+.arrow-left{
+  transform: rotate(90deg);
+}
+.arrow-right{
+  transform: rotate(-90deg);
+}
+.display_none{
+  display: none;
 }

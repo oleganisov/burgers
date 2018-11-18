@@ -29,7 +29,7 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		'app/js/module.js', // Always at the end
+		'app/js/app.js', // Always at the end
 		])
 	.pipe(sourcemaps.init({loadMaps: true}))
 	.pipe(concat('app.min.js'))
@@ -38,9 +38,9 @@ gulp.task('js', function() {
 	.pipe(browsersync.reload({ stream: true }));
 });
 
-gulp.task('watch', ['sass', 'browser-sync'], function() {
+gulp.task('watch', ['sass','js', 'browser-sync'], function() {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
-	//gulp.watch(['libs/**/*.js', 'app/js/*.js'], ['js']);
+	gulp.watch(['libs/**/*.js', 'app/js/*.js'], ['js']);
 	gulp.watch('app/*.html', browsersync.reload);
 });
 
