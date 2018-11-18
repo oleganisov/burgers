@@ -13,8 +13,9 @@ const slide_next=document.querySelector('#slide-next'),
       slide_prev=document.querySelector('#slide-prev'),
       slide_list=document.querySelector('#slide-list'),
       style=getComputedStyle(slide_list),
-      list_width=parseInt(style.width,10),
-      step=parseInt(getComputedStyle(slide_list.firstElementChild).width,10);
+      step=parseInt(getComputedStyle(slide_list.firstElementChild).width,10),
+      //list_width=parseInt(style.width,10),
+      list_width=parseInt(slide_list.children.length,10)*step;
 
 slide_next.addEventListener('click',function(e){
   e.preventDefault();
