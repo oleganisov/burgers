@@ -121,6 +121,10 @@ body {
           justify-content: space-between;
 }
 
+.container--slider {
+  overflow: hidden;
+}
+
 ul li {
   list-style: none;
 }
@@ -1135,10 +1139,6 @@ button {
 
 .slider__prev {
   position: absolute;
-  cursor: pointer;
-  z-index: 1;
-  left: 0;
-  height: 20%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1147,6 +1147,10 @@ button {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  left: 0;
+  height: 20%;
 }
 
 .slider__next {
@@ -1170,14 +1174,17 @@ button {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
   width: 67.14286rem;
 }
 
 @media (max-width: 768px) {
   .slider__elems {
     width: 54.85714rem;
-    height: 95%;
   }
 }
 
@@ -1192,6 +1199,7 @@ button {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   position: relative;
   right: 0;
   -webkit-transition: right .2s;
@@ -1204,11 +1212,16 @@ button {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   width: 67.14286rem;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -1221,9 +1234,10 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1286,14 +1300,6 @@ button {
   margin-bottom: 3.92857rem;
 }
 
-@media (max-width: 768px) {
-  .slider__title {
-    font-size: 3.57143rem;
-    margin-bottom: 2.14286rem;
-    line-height: 3.21429rem;
-  }
-}
-
 @media (max-width: 480px) {
   .slider__title {
     font-size: 3.21429rem;
@@ -1306,6 +1312,12 @@ button {
   color: #fff;
   line-height: 1.71429rem;
   margin-bottom: 1.78571rem;
+}
+
+@media (max-width: 768px) {
+  .slider__text {
+    margin-bottom: 3.57143rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1346,7 +1358,7 @@ button {
 
 .ico-recipe {
   position: absolute;
-  top: 0;
+  top: 15%;
   left: 0;
   cursor: pointer;
   display: -webkit-box;
@@ -1382,20 +1394,20 @@ button {
 
 @media (max-width: 768px) {
   .ico-recipe {
-    top: 0;
-    left: 15%;
+    top: 5%;
+    left: 10%;
   }
 }
 
 @media (max-width: 480px) {
   .ico-recipe {
-    top: -20%;
+    left: 15%;
   }
 }
 
 .ico-weight {
   position: absolute;
-  bottom: 0;
+  bottom: 15%;
   left: 0;
   text-align: center;
   opacity: 0.5;
@@ -1405,14 +1417,14 @@ button {
   .ico-weight {
     left: initial;
     bottom: initial;
-    top: 0;
-    right: 15%;
+    top: 5%;
+    right: 10%;
   }
 }
 
 @media (max-width: 480px) {
   .ico-weight {
-    top: -20%;
+    right: 15%;
   }
 }
 

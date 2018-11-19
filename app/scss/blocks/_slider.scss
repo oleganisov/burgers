@@ -2,12 +2,12 @@
   background: linear-gradient(0deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
   &__prev {
     position: absolute;
+    display: flex;
+    align-items: center;
     cursor: pointer;
     z-index: 1;
     left: 0;
     height: 20%;
-    display: flex;
-    align-items: center;
   }
   &__next{
     position: absolute;
@@ -20,11 +20,11 @@
   }
   &__elems{
     display: flex;
-    overflow: hidden;
+    align-items: center;
+    height: 100%;
     width: rem(940px);
     @include tablets{
       width: rem(768px);
-      height: 95%;
     }
     @include phones{
       width: rem(480px);
@@ -32,20 +32,23 @@
   }
   &__list{
     display: flex;
+    height: 100%;
     position: relative;
     right: 0;
     transition: right .2s;
   }
   &__item {
     display: flex;
+    height: 100%;
     width: rem(940px);
     flex: 1;
+    align-items: center;
     position: relative;
     @include tablets {
       width: rem(768px);
       flex-direction: column;
       text-align: center;
-      align-self: flex-end;
+      justify-content: center;
     }
     @include phones{
       width: rem(480px);
@@ -75,11 +78,6 @@
   &__title {
     line-height: rem(65px);
     margin-bottom: rem(55px);
-    @include tablets{
-      font-size: rem(50px);
-      margin-bottom: rem(30px);
-      line-height: rem(45px);
-    }
     @include phones{
       font-size: rem(45px);
       line-height: rem(45px);
@@ -90,6 +88,9 @@
     color: #fff;
     line-height: rem(24px);
     margin-bottom: rem(25px);
+    @include tablets{
+      margin-bottom: rem(50px);
+    }
     @include phones{
       line-height: rem(20px);
       margin-bottom: rem(15px);
@@ -111,7 +112,7 @@
 
 .ico-recipe {
   position: absolute;
-  top: 0;
+  top: 15%;
   left: 0;
   cursor: pointer;
   display: flex;
@@ -128,28 +129,28 @@
     background-color: rgba(227, 80, 40, 1);
   }
   @include tablets{
-    top: 0;
-    left: 15%;
+    top: 5%;
+    left: 10%;
   }
   @include phones{
-    top: -20%;
+    left: 15%;
   }
 }
 
 .ico-weight {
   position: absolute;
-  bottom: 0;
+  bottom: 15%;
   left: 0;
   text-align: center;
   opacity: 0.5;
   @include tablets {
     left: initial;
     bottom: initial;
-    top: 0;
-    right: 15%;
+    top: 5%;
+    right: 10%;
   }
   @include phones{
-    top: -20%;
+    right: 15%;
   }
 }
 
