@@ -66,12 +66,16 @@
 					</div>
 				</div>
 				<div class="next-screen">
-					<a href="#we_best"><img src="./img/content/first/arrow-scroll.svg" alt=""></a>
+					<a href="#sec_we">
+						<svg class="arrow-pic">
+							<use xlink:href="./img/icons/sprite.svg#arrow-scroll" />
+						</svg>
+					</a>
 				</div>
 			</div>
 		</section>
 		<!-- we section -->
-		<section class="section we" id="we_best">
+		<section class="section we" id="sec_we">
 			<div class="container">
 				<h2 class="we__title title-black">Мы лучшие</h2>
 				<div class="we__features">
@@ -130,20 +134,83 @@
 			</div>
 		</section>
 		<!-- slider section -->
-		<section class="section slider">
+		<section class="section slider" id="sec_slider">
 			<div class="container container--slider">
 				<a class="slider__prev" href="#" id="slide-prev">
-					<img class="arrow-left" src="./img/content/first/arrow-scroll.svg" alt="">
+					<svg class="arrow-left">
+						<use xlink:href="./img/icons/sprite.svg#arrow-scroll" />
+					</svg>
 				</a>
 				<a class="slider__next" href="#" id="slide-next">
-					<img class="arrow-right" src="./img/content/first/arrow-scroll.svg" alt="">
+					<svg class="arrow-right">
+						<use xlink:href="./img/icons/sprite.svg#arrow-scroll" />
+					</svg>
 				</a>
 				<div class="slider__elems" id="slide-elems">
 					<ul class="slider__list" id="slide-list">
 						<li class="slider__item">
-							<div class="slider__ico ico-recipe">
+							<div class="slider__ico recipe">
 								<img class="slider__icon" src="./img/icons/burger.svg" alt="">
 								<div class="slider__icon-text">состав</div>
+								<div class="recipe__dropdown">
+									<ul class="recipe__list">
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#beef" />
+												</svg>
+												<div class="row-text">Говядина</div>
+												<div class="row-weight">300г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#buns" />
+												</svg>
+												<div class="row-text">Булочки</div>
+												<div class="row-weight">100г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#salad" />
+												</svg>
+												<div class="row-text">Зелень</div>
+												<div class="row-weight">70г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#sauce" />
+												</svg>
+												<div class="row-text">Соус</div>
+												<div class="row-weight">150г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cucumber" />
+												</svg>
+												<div class="row-text">Овощи</div>
+												<div class="row-weight">200г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cheese" />
+												</svg>
+												<div class="row-text">Сыр</div>
+												<div class="row-weight">80г</div>
+											</div>
+										</li>
+									</ul>
+
+								</div>
 							</div>
 							<div class="slider__ico ico-weight">
 								<img class="slider__icon" src="./img/icons/kkal.svg" alt="">
@@ -169,9 +236,67 @@
 							</div>
 						</li>
 						<li class="slider__item">
-							<div class="slider__ico ico-recipe">
+							<div class="slider__ico recipe">
 								<img class="slider__icon" src="./img/icons/burger.svg" alt="">
 								<div class="slider__icon-text">состав</div>
+								<div class="recipe__dropdown">
+									<ul class="recipe__list">
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#beef" />
+												</svg>
+												<div class="row-text">Говядина</div>
+												<div class="row-weight">300г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#buns" />
+												</svg>
+												<div class="row-text">Булочки</div>
+												<div class="row-weight">100г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#salad" />
+												</svg>
+												<div class="row-text">Зелень</div>
+												<div class="row-weight">70г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#sauce" />
+												</svg>
+												<div class="row-text">Соус</div>
+												<div class="row-weight">150г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cucumber" />
+												</svg>
+												<div class="row-text">Овощи</div>
+												<div class="row-weight">200г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cheese" />
+												</svg>
+												<div class="row-text">Сыр</div>
+												<div class="row-weight">80г</div>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 							<div class="slider__ico ico-weight">
 								<img class="slider__icon" src="./img/icons/kkal.svg" alt="">
@@ -197,9 +322,68 @@
 							</div>
 						</li>
 						<li class="slider__item">
-							<div class="slider__ico ico-recipe">
+							<div class="slider__ico recipe">
 								<img class="slider__icon" src="./img/icons/burger.svg" alt="">
 								<div class="slider__icon-text">состав</div>
+								<div class="recipe__dropdown">
+									<ul class="recipe__list">
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#beef" />
+												</svg>
+												<div class="row-text">Говядина</div>
+												<div class="row-weight">300г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#buns" />
+												</svg>
+												<div class="row-text">Булочки</div>
+												<div class="row-weight">100г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#salad" />
+												</svg>
+												<div class="row-text">Зелень</div>
+												<div class="row-weight">70г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#sauce" />
+												</svg>
+												<div class="row-text">Соус</div>
+												<div class="row-weight">150г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cucumber" />
+												</svg>
+												<div class="row-text">Овощи</div>
+												<div class="row-weight">200г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cheese" />
+												</svg>
+												<div class="row-text">Сыр</div>
+												<div class="row-weight">80г</div>
+											</div>
+										</li>
+									</ul>
+
+								</div>
 							</div>
 							<div class="slider__ico ico-weight">
 								<img class="slider__icon" src="./img/icons/kkal.svg" alt="">
@@ -225,9 +409,68 @@
 							</div>
 						</li>
 						<li class="slider__item">
-							<div class="slider__ico ico-recipe">
+							<div class="slider__ico recipe">
 								<img class="slider__icon" src="./img/icons/burger.svg" alt="">
 								<div class="slider__icon-text">состав</div>
+								<div class="recipe__dropdown">
+									<ul class="recipe__list">
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#beef" />
+												</svg>
+												<div class="row-text">Говядина</div>
+												<div class="row-weight">300г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#buns" />
+												</svg>
+												<div class="row-text">Булочки</div>
+												<div class="row-weight">100г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#salad" />
+												</svg>
+												<div class="row-text">Зелень</div>
+												<div class="row-weight">70г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#sauce" />
+												</svg>
+												<div class="row-text">Соус</div>
+												<div class="row-weight">150г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cucumber" />
+												</svg>
+												<div class="row-text">Овощи</div>
+												<div class="row-weight">200г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cheese" />
+												</svg>
+												<div class="row-text">Сыр</div>
+												<div class="row-weight">80г</div>
+											</div>
+										</li>
+									</ul>
+
+								</div>
 							</div>
 							<div class="slider__ico ico-weight">
 								<img class="slider__icon" src="./img/icons/kkal.svg" alt="">
@@ -253,9 +496,68 @@
 							</div>
 						</li>
 						<li class="slider__item">
-							<div class="slider__ico ico-recipe">
+							<div class="slider__ico recipe">
 								<img class="slider__icon" src="./img/icons/burger.svg" alt="">
 								<div class="slider__icon-text">состав</div>
+								<div class="recipe__dropdown">
+									<ul class="recipe__list">
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#beef" />
+												</svg>
+												<div class="row-text">Говядина</div>
+												<div class="row-weight">300г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#buns" />
+												</svg>
+												<div class="row-text">Булочки</div>
+												<div class="row-weight">100г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#salad" />
+												</svg>
+												<div class="row-text">Зелень</div>
+												<div class="row-weight">70г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#sauce" />
+												</svg>
+												<div class="row-text">Соус</div>
+												<div class="row-weight">150г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cucumber" />
+												</svg>
+												<div class="row-text">Овощи</div>
+												<div class="row-weight">200г</div>
+											</div>
+										</li>
+										<li class="recipe__item">
+											<div class="recipe__row">
+												<svg class="row-pic">
+													<use xlink:href="./img/icons/sprite.svg#cheese" />
+												</svg>
+												<div class="row-text">Сыр</div>
+												<div class="row-weight">80г</div>
+											</div>
+										</li>
+									</ul>
+
+								</div>
 							</div>
 							<div class="slider__ico ico-weight">
 								<img class="slider__icon" src="./img/icons/kkal.svg" alt="">
@@ -285,7 +587,7 @@
 			</div>
 		</section>
 		<!-- team section -->
-		<section class="section team">
+		<section class="section team" id="sec_team">
 			<div class="team__nav">
 				<div class="team__title title-yellow">команда</div>
 				<div class="team__menu">
@@ -363,7 +665,7 @@
 			</div>
 		</section>
 		<!-- menu section -->
-		<section class="section menu">
+		<section class="section menu" id="sec_menu">
 			<div class="menu__title title-white">меню</div>
 			<!-- <div class="menu__accordeon"> -->
 			<ul class="accordeon">
@@ -405,7 +707,7 @@
 			<!-- </div> -->
 		</section>
 		<!-- reviews section -->
-		<section class="section reviews">
+		<section class="section reviews" id="sec_review">
 			<ul class="reviews__list">
 				<li class="reviews__item">
 					<div class="reviews__photo" style="background-image: url('./img/content/reviews/1.jpg');"></div>
@@ -512,9 +814,14 @@
 					</div>
 				</li>
 			</ul>
+
 		</section>
+		<!-- work section -->
+		<!-- <section class="section work" id="sec_work">
+
+		</section> -->
 		<!-- delivery section -->
-		<section class="section delivery">
+		<section class="section delivery" id="sec_deliv">
 			<div class="container">
 				<div>
 					<h2 class="delivery__title title-yellow">Закажите доставку</h2>
@@ -591,7 +898,7 @@
 			</div>
 		</section>
 		<!-- map section -->
-		<section class="section map">
+		<section class="section map" id="sec_map">
 			<div class="yandex-map">
 			</div>
 			<footer class="footer">
@@ -649,24 +956,24 @@
 				<img class="logo__pic" src="./img/icons/logo.svg" alt="Бургер Лого">
 			</div>
 		</div>
-		<ul class="hamburger-menu__list">
+		<ul class="hamburger-menu__list" id="ham_list">
 			<li class="hamburger-menu__item">
-				<a href="#" class="hamburger-menu__link">о нас</a>
+				<a href="#sec_we" class="hamburger-menu__link">о нас</a>
 			</li>
 			<li class="hamburger-menu__item">
-				<a href="#" class="hamburger-menu__link">бургеры</a>
+				<a href="#sec_slider" class="hamburger-menu__link">бургеры</a>
 			</li>
 			<li class="hamburger-menu__item">
-				<a href="#" class="hamburger-menu__link">команда</a>
+				<a href="#sec_team" class="hamburger-menu__link">команда</a>
 			</li>
 			<li class="hamburger-menu__item">
-				<a href="#" class="hamburger-menu__link">меню</a>
+				<a href="#sec_menu" class="hamburger-menu__link">меню</a>
 			</li>
 			<li class="hamburger-menu__item">
-				<a href="#" class="hamburger-menu__link">отзывы</a>
+				<a href="#sec_review" class="hamburger-menu__link">отзывы</a>
 			</li>
 			<li class="hamburger-menu__item">
-				<a href="#" class="hamburger-menu__link">контакты</a>
+				<a href="#sec_map" class="hamburger-menu__link">контакты</a>
 			</li>
 		</ul>
 
