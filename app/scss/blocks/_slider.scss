@@ -1,0 +1,248 @@
+.slider {
+  background: linear-gradient(0deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
+  &__prev {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    left: rem(-15px);
+    height: 20%;
+    @include tablets{
+      left: 0;
+    }
+  }
+  &__next {
+    position: absolute;
+    z-index: 1;
+    right: rem(-15px);
+    height: 20%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include tablets{
+      right: 0;
+    }
+  }
+  &__elems {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: rem(940px);
+    @include tablets {
+      width: rem(768px);
+    }
+    @include phones {
+      width: rem(480px);
+    }
+  }
+  &__list {
+    display: flex;
+    height: 100%;
+    position: relative;
+    right: 0;
+    transition: right .2s;
+  }
+  &__item {
+    display: flex;
+    height: 100%;
+    width: rem(940px);
+    flex: 1;
+    align-items: center;
+    position: relative;
+    @include tablets {
+      width: rem(768px);
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+    @include phones {
+      width: rem(480px);
+    }
+  }
+  &__pic {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+  }
+  &__img {
+    max-width: 95%;
+    @include tablets {
+      max-width: 65%;
+    }
+    @include phones {
+      max-width: 50%;
+    }
+  }
+  &__desc {
+    flex: 1;
+    @include phones {
+      padding: 0 15%;
+    }
+  }
+  &__title {
+    line-height: rem(65px);
+    margin-bottom: rem(55px);
+    @include phones {
+      font-size: rem(45px);
+      line-height: rem(45px);
+      margin-bottom: rem(20px);
+    }
+  }
+  &__text {
+    color: #fff;
+    line-height: rem(24px);
+    margin-bottom: rem(25px);
+    @include tablets {
+      margin-bottom: rem(50px);
+    }
+    @include phones {
+      line-height: rem(20px);
+      margin-bottom: rem(15px);
+    }
+  }
+  &__icon-text {
+    @include gagalin(#fff);
+    font-size: rem(14px);
+    letter-spacing: rem(1px);
+  }
+  &__order {
+    display: flex;
+    align-items: baseline;
+    @include tablets {
+      justify-content: center;
+    }
+  }
+}
+
+.recipe {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1% 0;
+  height: rem(90px);
+  width: rem(90px);
+  background-color: rgba(227, 80, 40, 0.4);
+  transition: background-color .3s;
+  border-radius: rem(5px);
+  &:hover {
+    background-color: rgba(227, 80, 40, 1);
+  }
+  @include tablets {
+    top: 5%;
+    left: 10%;
+  }
+  @include phones {
+    left: 15%;
+  }
+  &__dropdown {
+    cursor: default;
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    opacity: 0;
+    border-radius: rem(5px);
+    background-color: #fff;
+    transition: opacity .2s;
+  }
+  &__list {
+    padding: rem(15px) rem(15px);
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.recipe:hover .recipe__dropdown {
+  left: 100%;
+  opacity: 1;
+}
+
+.row-pic {
+  width: rem(45px);
+  height: rem(45px);
+  margin-right: rem(25px);
+}
+
+.row-text {
+  font-weight: 500;
+  margin-right: rem(60px);
+}
+
+.ico-weight {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  text-align: center;
+  opacity: 0.5;
+  @include tablets {
+    left: initial;
+    bottom: initial;
+    top: 5%;
+    right: 10%;
+  }
+  @include phones {
+    right: 15%;
+  }
+}
+
+.text-big {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: rem(20px);
+}
+
+.order {
+  &-price {
+    margin-right: rem(10px);
+    @include tablets {
+      font-size: rem(50px);
+    }
+  }
+  &-currency {
+    @include gagalin($red);
+    font-size: rem(30px);
+    margin-right: rem(30px);
+    @include phones {
+      font-size: rem(24px);
+    }
+  }
+}
+
+.arrow-left {
+  width: rem(50px);
+  height: rem(30px);
+  transform: rotate(90deg);
+  transition: .2s;
+  &:hover {
+    transform: rotate(90deg) scale(.8);
+  }
+  @include phones {
+    width: rem(40px);
+    height: rem(20px);
+  }
+}
+
+.arrow-right {
+  width: rem(50px);
+  height: rem(30px);
+  transform: rotate(-90deg);
+  transition: .2s;
+  &:hover {
+    transform: rotate(-90deg) scale(.8);
+  }
+  @include phones {
+    width: rem(40px);
+    height: rem(20px);
+  }
+}

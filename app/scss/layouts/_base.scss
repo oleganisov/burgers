@@ -18,6 +18,9 @@ body {
   position: relative;
   height: 100%;
 }
+.is-locked{
+  overflow: hidden;
+}
 
 .wrapper {
   height: 100%;
@@ -47,7 +50,9 @@ body {
   &--first {
     justify-content: space-between;
   }
-  // &
+  &--slider {
+    overflow: hidden;
+  }
 }
 
 ul li {
