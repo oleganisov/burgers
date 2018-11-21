@@ -1,13 +1,15 @@
+/////////////////////////hamburger menu
 const menu_btn = document.querySelector('#menu_btn'),
   ham_menu = document.querySelector('#ham_menu'),
   ham_list = document.querySelector('#ham_list'),
   body = document.querySelector('body');
+
   function toggleMenu(){
     menu_btn.classList.toggle('is-active');
     ham_menu.classList.toggle('is-active');
     body.classList.toggle('is-locked');
   };
-
+  
 menu_btn.addEventListener('click', function (e) {
   e.preventDefault();
   toggleMenu();
@@ -18,9 +20,7 @@ ham_list.addEventListener('click', function (e) {
     toggleMenu();
   };
 });
-
-
-/////////////////////////
+/////////////////////////slider
 const slide_next=document.querySelector('#slide-next'),
       slide_prev=document.querySelector('#slide-prev'),
       slide_list=document.querySelector('#slide-list'),
@@ -30,23 +30,17 @@ const slide_next=document.querySelector('#slide-next'),
 
 function shift_right(a,b){
   slide_list.style.right=a+b+'px';
-  // return result=a+b+'px';
 };
 slide_next.addEventListener('click',function(e){
   e.preventDefault();
   let cur_right=parseInt(style.right,10);
-
   if (!cur_right) {
     cur_right=0;
   };
   if (cur_right<list_width-step){
-    // slide_list.style.right=cur_right+step+'px';
-    // slide_list.style.right=shift(cur_right,step);
     shift_right(cur_right,step);
   } 
   else {
-    // slide_list.style.right=0+'px';
-    // slide_list.style.right=shift(0,0);
     shift_right(0,0);
 }
 });
@@ -54,18 +48,37 @@ slide_next.addEventListener('click',function(e){
 slide_prev.addEventListener('click',function(e){
   e.preventDefault();
   let cur_right=parseInt(style.right,10);
-
   if (!cur_right) {
     cur_right=0;
   };
   if (cur_right>0){
-    // slide_list.style.right=cur_right-step+'px';
-    // slide_list.style.right=shift(cur_right,-step);
     shift_right(cur_right,-step);
   }
   else {
-    // slide_list.style.right=list_width-step+'px';
-    // slide_list.style.right=shift(list_width,-step);
     shift_right(list_width,-step);
   };
 });
+/////////////////////////accordeon
+const team_accord=document.querySelector("#team_accord"),
+      team_items=team_accord.children,
+      menu_accord=document.querySelector("#menu_accord")
+      menu_items=menu_accord.children;
+
+function addLsn(items_list){
+for (let i=0;i<items_list.length;i++){
+  items_list[i].addEventListener('click',function(e){
+    e.preventDefault();
+    toggleAccord(items_list,this);
+  });
+};
+};
+
+function toggleAccord(items_list1,cur_item){
+  for (let i=0;i<items_list1.length;i++){
+    items_list1[i].classList.remove('is-active');
+  };
+  cur_item.classList.add('is-active');
+};
+
+addLsn(team_items);
+addLsn(menu_items);
