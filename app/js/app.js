@@ -82,3 +82,23 @@ function toggleAccord(items_list1,cur_item){
 
 addLsn(team_items);
 addLsn(menu_items);
+/////////////////////////reviews-modal
+const review_btn=document.querySelector("#review_btn"),
+      review_modal=document.querySelector("#review_modal"),
+      review__btns=document.querySelectorAll('.reviews__btn');
+
+function toggleNod(toggleElem){
+  toggleElem.classList.toggle('is-active');
+  body.classList.toggle('is-locked');
+};
+
+review_btn.addEventListener('click',function(e){
+  e.preventDefault();
+  toggleNod(review_modal);
+});
+for (let i=0;i<review__btns.length;i++){
+  review__btns[i].addEventListener('click',function(e){
+    e.preventDefault();
+    toggleNod(review_modal);
+  })
+}
