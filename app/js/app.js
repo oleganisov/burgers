@@ -118,10 +118,10 @@ btn_send.addEventListener('click',function(e){
   formData.append('to','my@valid.em');
   xhr.onload  = function() {
     let jsonResponse = JSON.parse(xhr.responseText);
-    if (jsonResponse.status==1){
+    if (jsonResponse.status==0){  //status 0 fail send
       alert(jsonResponse.message);
     } else {
-      alert(jsonResponse.message);
+      alert(jsonResponse.message); //status 1 success send
     }
  };
 
