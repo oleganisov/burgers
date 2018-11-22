@@ -1895,12 +1895,10 @@ button {
 
 .hamburger-link {
   display: none;
+  height: 1.78571rem;
   position: fixed;
   right: 3%;
   top: 6%;
-  width: 1.78571rem;
-  height: 1.64286rem;
-  cursor: pointer;
   z-index: 10;
 }
 
@@ -1927,19 +1925,18 @@ button {
 }
 
 .hamburger-bar, .hamburger-bar::before, .hamburger-bar::after {
-  background: #fff;
+  background-color: #fff;
   -webkit-border-radius: 0.21429rem;
           border-radius: 0.21429rem;
   height: 0.28571rem;
-  width: 1.71429rem;
+  width: 1.78571rem;
+  display: block;
 }
 
 .hamburger-bar::before {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
-  margin-right: 4px;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   -o-transition: transform .3s;
@@ -1949,7 +1946,6 @@ button {
 
 .hamburger-bar::after {
   content: "";
-  display: block;
   position: absolute;
   bottom: 0;
   -webkit-transition: -webkit-transform .3s;
@@ -1964,13 +1960,80 @@ button {
 }
 
 .hamburger-link.is-active .hamburger-bar::before {
-  -webkit-transform: translateY(0.64286rem) rotate(45deg);
-      -ms-transform: translateY(0.64286rem) rotate(45deg);
-          transform: translateY(0.64286rem) rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0.78571rem;
 }
 
 .hamburger-link.is-active .hamburger-bar::after {
-  -webkit-transform: translateY(-0.64286rem) rotate(-45deg);
-      -ms-transform: translateY(-0.64286rem) rotate(-45deg);
-          transform: translateY(-0.64286rem) rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 0.71429rem;
+}
+
+.review-modal__close, .review-modal__close::before, .review-modal__close::after {
+  background-color: #e45028;
+  -webkit-border-radius: 0.21429rem;
+          border-radius: 0.21429rem;
+  height: 0.28571rem;
+  width: 1.78571rem;
+  display: block;
+}
+
+.review-modal {
+  max-width: 32.85714rem;
+  position: fixed;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-border-radius: 3%;
+          border-radius: 3%;
+  padding: 1.42857rem;
+}
+
+.review-modal__title {
+  font-family: Gagalin;
+  font-size: 5.14286rem;
+  color: #2f3234;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.review-modal__text {
+  line-height: 1.78571rem;
+}
+
+.review-modal__link {
+  position: absolute;
+  height: 1.78571rem;
+  right: 3%;
+  top: 10%;
+}
+
+.review-modal__close {
+  background-color: transparent;
+}
+
+.review-modal__close::before {
+  content: "";
+  position: absolute;
+  top: 0.78571rem;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.review-modal__close::after {
+  content: "";
+  position: absolute;
+  bottom: 0.71429rem;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }

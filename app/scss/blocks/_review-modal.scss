@@ -1,0 +1,49 @@
+%close_bar {
+  background-color: rgb(228, 80, 40);
+  border-radius: rem(3px);
+  height: rem(4px);
+  width: rem(25px);
+  display: block;
+}
+.review-modal{
+  max-width: rem(460px);
+  position: fixed;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 3%;
+  padding: rem(20px);
+  &__title{
+    @include gagalin($black);
+    font-size: rem(14px);
+    margin-bottom: (30px);
+  }
+  &__text{
+    line-height: rem(25px);
+  }
+  &__link{
+    position: absolute;
+    height: rem(25px);
+    right: 3%;
+    top: 10%;
+  }
+  &__close{
+    background-color: transparent;
+    @extend %close_bar;
+    &::before {
+      content: "";
+      @extend %close_bar;
+      position: absolute;
+      top: rem(11px);
+      transform: rotate(45deg);
+    }
+    &::after {
+      content: "";
+      @extend %close_bar;
+      position: absolute;
+      bottom: rem(10px);
+      transform: rotate(-45deg);
+    }
+  }
+}

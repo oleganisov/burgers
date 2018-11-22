@@ -48,12 +48,10 @@
 
 .hamburger-link {
   display: none;
+  height: rem(25px);
   position: fixed;
   right: 3%;
   top: 6%;
-  width: rem(25px);
-  height: rem(23px);
-  cursor: pointer;
   z-index: 10;
   @include tablets {
     display: flex;
@@ -64,10 +62,11 @@
 }
 
 %ham_line {
-  background: #fff;
+  background-color: #fff;
   border-radius: rem(3px);
   height: rem(4px);
-  width: rem(24px);
+  width: rem(25px);
+  display: block;
 }
 
 .hamburger-bar {
@@ -75,16 +74,13 @@
   &::before {
     content: "";
     @extend %ham_line;
-    display: block;
     position: absolute;
     top: 0;
-    margin-right: 4px;
     transition: transform .3s;
   }
   &::after {
     content: "";
     @extend %ham_line;
-    display: block;
     position: absolute;
     bottom: 0;
     transition: transform .3s;
@@ -95,10 +91,12 @@
   .hamburger-bar {
     background-color: transparent;
     &::before {
-      transform: translateY(rem(9px)) rotate(45deg);
+      transform: rotate(45deg);
+      top: rem(11px);
     }
     &::after {
-      transform: translateY(rem(-9px)) rotate(-45deg);
+      transform: rotate(-45deg);
+      bottom: rem(10px);
     }
   }
 }
