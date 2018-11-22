@@ -100,5 +100,30 @@ for (let i=0;i<review__btns.length;i++){
   review__btns[i].addEventListener('click',function(e){
     e.preventDefault();
     toggleNod(review_modal);
-  })
+  });
 }
+/////////////////////////form data
+const form_order=document.querySelector('#form_order'),
+      btn_send=document.querySelector('#btn_send');
+
+btn_send.addEventListener('click',function(e){
+  e.preventDefault();
+  const formData = new FormData(),
+    xhr = new XMLHttpRequest();
+    xhr.resposeType='json';
+    xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+  formData.append('name',form_order.elements.firstname.value);
+  formData.append('phone',form_order.elements.phone.value);
+  formData.append('comment',form_order.elements.comment.value);
+  formData.append('to','my@valid.em');
+  xhr.onload  = function() {
+    let jsonResponse = JSON.parse(xhr.responseText);
+    if (jsonResponse.status==1){
+      alert(jsonResponse.message);
+    } else {
+      alert(jsonResponse.message);
+    }
+ };
+
+ xhr.send(formData);
+});

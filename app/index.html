@@ -826,16 +826,16 @@
 				<div>
 					<h2 class="delivery__title title-yellow">Закажите доставку</h2>
 				</div>
-				<form action="post" class="delivery__content">
+				<form action="post" class="delivery__content" id="form_order">
 					<div class="delivery__left">
 						<div class="delivery__row">
 							<label class="delivery__input">
 								<div class="delivery__input-title">Имя</div>
-								<input type="text" class="delivery__input-text" placeholder="Иван">
+								<input type="text" class="delivery__input-text" placeholder="Иван" name="firstname" required>
 							</label>
 							<label class="delivery__input">
 								<div class="delivery__input-title">Телефон</div>
-								<input type="text" class="delivery__input-text" placeholder="89212264923">
+								<input type="text" class="delivery__input-text" placeholder="89212264923" name="phone"  required>
 							</label>
 						</div>
 						<div class="delivery__row">
@@ -867,7 +867,7 @@
 						<div class="delivery__row area-margin">
 							<label class="delivery__textarea-label">
 								<div class="delivery__input-title">Комментарий</div>
-								<textarea class="delivery__input-text delivery__textarea" placeholder=""></textarea>
+								<textarea class="delivery__input-text delivery__textarea" placeholder="" name="comment" required></textarea>
 							</label>
 						</div>
 						<div class="delivery__row row-center">
@@ -890,7 +890,7 @@
 							</label>
 						</div>
 						<div class="delivery__row row-center">
-							<a href="#" class="btn btn-red">Заказать</a>
+							<a href="#" class="btn btn-red" id="btn_send">Заказать</a>
 							<a href="#" class="btn">Очистить</a>
 						</div>
 					</div>
