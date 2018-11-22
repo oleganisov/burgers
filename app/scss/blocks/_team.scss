@@ -60,6 +60,7 @@
     display: flex;
     color: #fff;
     height: 0;
+    transition: height .2s;
     overflow: hidden;
     padding-top: rem(20px);
     @include tablets {

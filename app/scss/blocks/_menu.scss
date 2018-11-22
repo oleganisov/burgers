@@ -49,6 +49,7 @@
 
 .accordeon__item.is-active .accordeon__expand {
   width: rem(550px);
+  transition: width .3s;
   @include tablets{
     width: 100%;
     line-height: rem(30px);
