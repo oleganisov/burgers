@@ -31,12 +31,17 @@ const slide_next=document.querySelector('#slide-next'),
 function shift_right(a,b){
   slide_list.style.right=a+b+'px';
 };
-slide_next.addEventListener('click',function(e){
-  e.preventDefault();
+function current_right(){
   let cur_right=parseInt(style.right,10);
   if (!cur_right) {
     cur_right=0;
   };
+  return cur_right;
+};
+
+slide_next.addEventListener('click',function(e){
+  e.preventDefault();
+  let cur_right=current_right();
   if (cur_right<list_width-step){
     shift_right(cur_right,step);
   } 
@@ -47,10 +52,7 @@ slide_next.addEventListener('click',function(e){
 
 slide_prev.addEventListener('click',function(e){
   e.preventDefault();
-  let cur_right=parseInt(style.right,10);
-  if (!cur_right) {
-    cur_right=0;
-  };
+  let  cur_right=current_right();
   if (cur_right>0){
     shift_right(cur_right,-step);
   }
@@ -60,51 +62,28 @@ slide_prev.addEventListener('click',function(e){
 });
 /////////////////////////accordeon team & menu
 const team_accord=document.querySelector("#team_accord"),
-      team_items=team_accord.children,
-      menu_accord=document.querySelector("#menu_accord")
-      menu_items=menu_accord.children;
-//// old array version
-// function addLsn(items_list){
-// for (let i=0;i<items_list.length;i++){
-//   items_list[i].addEventListener('click',function(e){
-//     e.preventDefault();
-//     toggleAccord(items_list,this);
-//   });
-// };
-// };
-// function toggleAccord(items_list1,cur_item){
-//   for (let i=0;i<items_list1.length;i++){
-//     items_list1[i].classList.remove('is-active');
-//   };
-//   cur_item.classList.add('is-active');
-// };
-// addLsn(team_items);
-// addLsn(menu_items);
+      menu_accord=document.querySelector("#menu_accord");
 
-//// new version
-function addLsnUl(elem_ul,list_item){
-  elem_ul.addEventListener('click',function(e){
-    e.preventDefault();
-    closeAccord(list_item);
-    if (e.target.tagName="A"){
-      e.target.closest('li').classList.add('is-active');
-    } else if (e.target.tagName="DIV"){
-      e.target.closest('li').classList.add('is-active');
-    }
-  })
-}
-function closeAccord(items_lst){
-  for (let i=0;i<items_lst.length;i++){
-    items_lst[i].classList.remove('is-active');
+function closeAccord(list_item){
+  for (let i=0;i<list_item.length;i++){
+    list_item[i].classList.remove('is-active');
   };
 };
 
-addLsnUl(team_accord,team_items);
-addLsnUl(menu_accord,menu_items);
+function addLsnUl(elem_ul,item_class){
+  elem_ul.addEventListener('click',function(e){
+    const list_item=elem_ul.children;
+    e.preventDefault();
+    closeAccord(list_item);
+    e.target.closest(item_class).classList.add('is-active');
+  });
+};
+
+addLsnUl(team_accord,'.team__item');
+addLsnUl(menu_accord,'.accordeon__item');
 /////////////////////////reviews-modal
-const review_btn=document.querySelector("#review_btn"),
-      review_modal=document.querySelector("#review_modal"),
-      review__btns=document.querySelectorAll('.reviews__btn');
+const review_btn=document.querySelector('#review_btn'),
+      review_modal=document.querySelector('#review_modal');
 
 function toggleNod(toggleElem){
   toggleElem.classList.toggle('is-active');
@@ -115,12 +94,18 @@ review_btn.addEventListener('click',function(e){
   e.preventDefault();
   toggleNod(review_modal);
 });
-for (let i=0;i<review__btns.length;i++){
-  review__btns[i].addEventListener('click',function(e){
+  const review__btns=document.querySelectorAll('.reviews__btn'),
+        tittle_mod=document.querySelector('#tittle_mod'),
+        text_mod=document.querySelector('#text_mod');
+        
+    review__btns.forEach(rev_btn => {
+    rev_btn.addEventListener('click',function(e){
     e.preventDefault();
     toggleNod(review_modal);
+    text_mod.textContent=rev_btn.previousElementSibling.textContent;
+    tittle_mod.textContent=rev_btn.previousElementSibling.previousElementSibling.textContent;
   });
-}
+});
 /////////////////////////form data
 const form_order=document.querySelector('#form_order'),
       btn_send=document.querySelector('#btn_send');
@@ -128,13 +113,17 @@ const form_order=document.querySelector('#form_order'),
 btn_send.addEventListener('click',function(e){
   e.preventDefault();
   const formData = new FormData(),
-    xhr = new XMLHttpRequest();
-    xhr.resposeType='json';
-    xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+  
+  xhr = new XMLHttpRequest();
+  xhr.resposeType='json';
+  xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+  
   formData.append('name',form_order.elements.firstname.value);
   formData.append('phone',form_order.elements.phone.value);
   formData.append('comment',form_order.elements.comment.value);
   formData.append('to','my@valid.em');
+  
+  xhr.send(formData);
   xhr.onload  = function() {
     let jsonResponse = JSON.parse(xhr.responseText);
     if (jsonResponse.status==0){  //status 0 fail send
@@ -143,6 +132,4 @@ btn_send.addEventListener('click',function(e){
       alert(jsonResponse.message); //status 1 success send
     }
  };
-
- xhr.send(formData);
 });

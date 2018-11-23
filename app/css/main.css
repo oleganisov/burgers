@@ -1245,7 +1245,6 @@ button {
   display: flex;
   height: 100%;
   position: relative;
-  right: 0;
   -webkit-transition: right .2s;
   -o-transition: right .2s;
   transition: right .2s;
