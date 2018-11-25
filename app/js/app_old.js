@@ -57,3 +57,28 @@ function toggleAccord(items_list1,cur_item){
 };
 addLsn(team_items);
 addLsn(menu_items);
+/////////////////////////reviews-modal
+const review_btn=document.querySelector('#review_btn'),
+      review_modal=document.querySelector('#review_modal');
+
+function toggleNod(toggleElem){
+  toggleElem.classList.toggle('is-active');
+  body.classList.toggle('is-locked');
+};
+
+review_btn.addEventListener('click',function(e){
+  e.preventDefault();
+  toggleNod(review_modal);
+});
+  const review__btns=document.querySelectorAll('.reviews__btn'),
+        tittle_mod=document.querySelector('#tittle_mod'),
+        text_mod=document.querySelector('#text_mod');
+        
+    review__btns.forEach(rev_btn => {
+    rev_btn.addEventListener('click',function(e){
+    e.preventDefault();
+    toggleNod(review_modal);
+    text_mod.textContent=rev_btn.previousElementSibling.textContent;
+    tittle_mod.textContent=rev_btn.previousElementSibling.previousElementSibling.textContent;
+  });
+});

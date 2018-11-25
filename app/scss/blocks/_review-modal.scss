@@ -5,7 +5,7 @@
   width: rem(25px);
   display: block;
 }
-.review-modal{
+.modal{
   background-color: rgba($black, 0.95);
   position: fixed;
   left:-9999px;
@@ -14,7 +14,7 @@
   height: 0;
   opacity: 0;
   z-index: 15;
-  &__block{
+  &__inner{
   max-width: rem(460px);
   position: absolute;
   background-color: #fff;
@@ -66,7 +66,7 @@
     }
   }
 }
-.review-modal.is-active{
+.modal.is-active{
   height: 100%;
   opacity: 1;
   left:0;
