@@ -67,18 +67,37 @@ slide_prev.addEventListener('click',function(e){
 const team_accord=document.querySelector("#team_accord"),
       menu_accord=document.querySelector("#menu_accord");
 
-function closeAccord(list_item){
-  for (let i=0;i<list_item.length;i++){
-    list_item[i].classList.remove('is-active');
-  };
-};
+// function closeAccord(list_item){
+//   for (let i=0;i<list_item.length;i++){
+//     list_item[i].classList.remove('is-active');
+//   };
+// };
 
+// function calcHeight(){
+
+// }
+
+function calcWidth(item){
+  let item_w=getComputedStyle(item).width;
+  return item_w;
+}
 function addLsnUl(elem_ul,item_class){
   elem_ul.addEventListener('click',function(e){
-    const list_item=elem_ul.children;
     e.preventDefault();
-    closeAccord(list_item);
-    e.target.closest(item_class).classList.add('is-active');
+    const list_item=elem_ul.querySelectorAll(item_class);
+
+    let activeItem=document.querySelector(item_class+'.is-active');
+    let curItem=e.target.closest(item_class);
+    list_item.forEach(item=>{
+      if (item==activeItem){
+        item.classList.remove('is-active');
+      };
+      if (item==curItem&&item!==activeItem){
+        item.classList.add('is-active');
+        console.log(calcWidth(item));
+        console.log($(item).width());
+      };
+  });
   });
 };
 
