@@ -198,17 +198,21 @@ button {
   color: #fff;
   -webkit-border-radius: 0.35714rem;
           border-radius: 0.35714rem;
+  border: none;
   display: inline-block;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 .btn-red {
-  background: #e45028;
+  background-color: #e45028;
   text-transform: uppercase;
   font-weight: 500;
 }
 
 .btn-black {
-  background: #2f3234;
+  background-color: #2f3234;
   text-transform: uppercase;
   font-weight: 500;
 }

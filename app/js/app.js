@@ -138,17 +138,17 @@ function createOverlay(template) {
 };
 
 /////////////////////////form data
-const form_order=document.querySelector('#form_order'),
-      btn_send=document.querySelector('#btn_send');
+const form_order=document.querySelector('#form_order');
 
-btn_send.addEventListener('click',function(e){
+  form_order.addEventListener('submit',function(e){
   e.preventDefault();
   const formData = new FormData(),
   
   xhr = new XMLHttpRequest();
   xhr.resposeType='json';
   xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
-  
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
   formData.append('name',form_order.elements.firstname.value);
   formData.append('phone',form_order.elements.phone.value);
   formData.append('comment',form_order.elements.comment.value);
@@ -157,10 +157,11 @@ btn_send.addEventListener('click',function(e){
   xhr.send(formData);
   xhr.onload  = function() {
     let jsonResponse = JSON.parse(xhr.responseText);
-    if (jsonResponse.status==0){  //status 0 fail send
-      overlay.setContent('Ошибка',jsonResponse.message);
+    
+    if (xhr.status!=200){
+      overlay.setContent('Ошибка','Произошла ошибка отправки данных');
     } else {
-      overlay.setContent('Сообщение',jsonResponse.message); //status 1 success send
+      overlay.setContent('Сообщение',jsonResponse.message);
     }
     overlay.open();
  };

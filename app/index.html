@@ -835,7 +835,7 @@
 							</label>
 							<label class="delivery__input">
 								<div class="delivery__input-title">Телефон</div>
-								<input type="tel" class="delivery__input-text" placeholder="89212264923" name="phone"  require>
+								<input type="tel" class="delivery__input-text" placeholder="89212264923" name="phone"  required>
 							</label>
 						</div>
 						<div class="delivery__row">
@@ -890,8 +890,8 @@
 							</label>
 						</div>
 						<div class="delivery__row row-center">
-							<a href="#" class="btn btn-red" id="btn_send">Заказать</a>
-							<a href="#" class="btn">Очистить</a>
+							<input class="btn btn-red" id="btn_send" type="submit" name="submit_btn" value="Заказать">
+							<input class="btn" id="btn_send" type="reset" name="reset_btn" value="Очистить">
 						</div>
 					</div>
 				</form>
