@@ -66,22 +66,21 @@ slide_prev.addEventListener('click',function(e){
 /////////////////////////accordeon team & menu
 const team_accord=document.querySelector("#team_accord"),
       menu_accord=document.querySelector("#menu_accord");
-
-// function closeAccord(list_item){
-//   for (let i=0;i<list_item.length;i++){
-//     list_item[i].classList.remove('is-active');
-//   };
-// };
-
-// function calcHeight(){
-
-// }
-
+// вычисление высоты
+function calcHeight(item){
+  let pic_h=$(item).find('.team__pic').height();
+  let desc_h=$(item).find('.team__desc').height();
+  return pic_h+desc_h;
+};
+// вычисление ширины
 function calcWidth(item){
-  let item_w=getComputedStyle(item).width;
-  return item_w;
-}
-function addLsnUl(elem_ul,item_class){
+  let win_w=$(window).width();
+  let link_w=$(item).find('a').width();
+  let calc_w=win_w-link_w*3;
+  return calc_w > 550 ? 550 : calc_w;
+};
+// вешаем обработчик на ul
+function addLsnUl(elem_ul,item_class,expand_class){
   elem_ul.addEventListener('click',function(e){
     e.preventDefault();
     const list_item=elem_ul.querySelectorAll(item_class);
@@ -91,18 +90,27 @@ function addLsnUl(elem_ul,item_class){
     list_item.forEach(item=>{
       if (item==activeItem){
         item.classList.remove('is-active');
+        if (expand_class=='.accordeon__expand'){
+          $(item).find(expand_class).width('0px');
+        }else{
+          $(item).find(expand_class).height('0px');
+        };
       };
       if (item==curItem&&item!==activeItem){
         item.classList.add('is-active');
-        console.log(calcWidth(item));
-        console.log($(item).width());
-      };
+        if (expand_class=='.accordeon__expand'){
+          $(item).find(expand_class).width(calcWidth(item));
+        }
+        else{
+          $(item).find(expand_class).height(calcHeight(item));
+        };
+    };
   });
   });
 };
 
-addLsnUl(team_accord,'.team__item');
-addLsnUl(menu_accord,'.accordeon__item');
+addLsnUl(team_accord,'.team__item','.team__expand');
+addLsnUl(menu_accord,'.accordeon__item','.accordeon__expand');
 
 // модуль overlay
 const modal=document.querySelector('#modal');
