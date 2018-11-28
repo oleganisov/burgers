@@ -15,6 +15,7 @@
   display: flex;
   &__item {
     display: flex;
+    flex-direction: row-reverse;
     height: 100%;
   }
   &__link {
@@ -27,6 +28,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    order: 1;
   }
   &__block {
     line-height: rem(70px);
@@ -38,17 +40,19 @@
     overflow: hidden;
     height: 100%;
     width: 0;
+    transition: width .3s;
     background: $black-alfa;
     color: #fff;
     line-height: rem(40px);
   }
   &__txt {
+    width: 100%;
     padding: rem(60px) rem(30px);
   }
 }
 
 .accordeon__item.is-active .accordeon__expand {
-  width: rem(550px);
+  transition: width .3s;
   @include tablets{
     width: 100%;
     line-height: rem(30px);

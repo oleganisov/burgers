@@ -2,14 +2,18 @@
   padding: rem(10px) rem(15px);
   color: #fff;
   border-radius: rem(5px);
+  border: none;
   display: inline-block;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
   &-red{
-    background: $red;
+    background-color: $red;
     text-transform: uppercase;
     font-weight: 500;
   }
   &-black{
-    background: $black;
+    background-color: $black;
     text-transform: uppercase;
     font-weight: 500;
   }

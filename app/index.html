@@ -28,25 +28,25 @@
 							<div class="nav__elem">
 								<ul class="nav__list">
 									<li class="nav__item">
-										<a href="#" class="nav__link">О НАС</a>
+										<a href="#sec_we" class="nav__link">О НАС</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">БУРГЕРЫ</a>
+										<a href="#sec_slider" class="nav__link">БУРГЕРЫ</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">КОМАНДА</a>
+										<a href="#sec_team" class="nav__link">КОМАНДА</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">МЕНЮ</a>
+										<a href="#sec_menu" class="nav__link">МЕНЮ</a>
 									</li>
 									<li class="nav__item ">
-										<a href="#" class="nav__link">ОТЗЫВЫ</a>
+										<a href="#sec_review" class="nav__link">ОТЗЫВЫ</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">КАК МЫ РАБОТАЕМ</a>
+										<a href="#sec_work" class="nav__link">КАК МЫ РАБОТАЕМ</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">КОНТАКТЫ</a>
+										<a href="#sec_map" class="nav__link">КОНТАКТЫ</a>
 									</li>
 								</ul>
 							</div>
@@ -147,7 +147,7 @@
 					</svg>
 				</a>
 				<div class="slider__elems" id="slide-elems">
-					<ul class="slider__list" id="slide-list">
+					<ul class="slider__list" id="slide-list" style="right:0">
 						<li class="slider__item">
 							<div class="slider__ico recipe">
 								<img class="slider__icon" src="./img/icons/burger.svg" alt="">
@@ -591,7 +591,7 @@
 			<div class="team__nav">
 				<div class="team__title title-yellow">команда</div>
 				<div class="team__menu">
-					<ul class="team__list">
+					<ul class="team__list" id="team_accord">
 						<li class="team__item">
 							<div class="team__row">
 								<a class="team__link" href="#">
@@ -599,7 +599,7 @@
 									<div class="link-title">Дэниэл Редклиф</div>
 								</a>
 							</div>
-							<div class="team__expand">
+							<div class="team__expand" style="height:0px">
 								<div class="team__pic">
 									<img class="team__img" src="./img/content/team/man.png" alt="Профиль">
 								</div>
@@ -609,14 +609,14 @@
 								</div>
 							</div>
 						</li>
-						<li class="team__item is-active">
+						<li class="team__item">
 							<div class="team__row">
 								<a class="team__link" href="#">
 									<img class="link-ico" src="./img/icons/triangle.svg" alt="Ссылка">
 									<div class="link-title">Ричард Джеймс</div>
 								</a>
 							</div>
-							<div class="team__expand">
+							<div class="team__expand" style="height:0px">
 								<div class="team__pic">
 									<img class="team__img" src="./img/content/team/man.png" alt="Профиль">
 								</div>
@@ -633,7 +633,7 @@
 									<div class="link-title">Джейк Финн</div>
 								</a>
 							</div>
-							<div class="team__expand">
+							<div class="team__expand" style="height:0px">
 								<div class="team__pic">
 									<img class="team__img" src="./img/content/team/man.png" alt="Профиль">
 								</div>
@@ -650,7 +650,7 @@
 									<div class="link-title">Николай Иванов</div>
 								</a>
 							</div>
-							<div class="team__expand">
+							<div class="team__expand" style="height:0px">
 								<div class="team__pic">
 									<img class="team__img" src="./img/content/team/man.png" alt="Профиль">
 								</div>
@@ -668,13 +668,13 @@
 		<section class="section menu" id="sec_menu">
 			<div class="menu__title title-white">меню</div>
 			<!-- <div class="menu__accordeon"> -->
-			<ul class="accordeon">
-				<li class="accordeon__item is-active">
+			<ul class="accordeon" id="menu_accord">
+				<li class="accordeon__item">
 					<a class="accordeon__link" href="#" style="background-image: url('./img/bg/menu-1.png')">
 						<div class="accordeon__block">
 							для мясоедов</div>
 					</a>
-					<div class="accordeon__expand">
+					<div class="accordeon__expand" style="width: 0px;">
 						<p class="accordeon__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit perspiciatis quos
 							magnam doloremque expedita voluptatem aliquam mollitia beatae iusto explicabo neque, consequuntur deserunt atque
 							ex velit delectus, minima quas veritatis.</p>
@@ -685,7 +685,7 @@
 						<div class="accordeon__block">
 							Вегетарианское</div>
 					</a>
-					<div class="accordeon__expand">
+					<div class="accordeon__expand" style="width: 0px;">
 						<p class="accordeon__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cumque minima minus
 							velit dolores deserunt quam corrupti modi delectus quis, rem temporibus maiores eaque doloremque. Voluptatem
 							velit libero officia quam!</p>
@@ -696,7 +696,7 @@
 						<div class="accordeon__block">
 							диетичесокое</div>
 					</a>
-					<div class="accordeon__expand">
+					<div class="accordeon__expand" style="width: 0px;">
 						<p class="accordeon__txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita illum consectetur
 							modi alias fugit veritatis nostrum earum rerum voluptate eveniet distinctio et corrupti officia saepe
 							dignissimos a sit, quisquam architecto obcaecati, magnam praesentium nobis illo dicta. Tempora molestias eos
@@ -826,16 +826,16 @@
 				<div>
 					<h2 class="delivery__title title-yellow">Закажите доставку</h2>
 				</div>
-				<form action="post" class="delivery__content">
+				<form action="post" class="delivery__content" id="form_order">
 					<div class="delivery__left">
 						<div class="delivery__row">
 							<label class="delivery__input">
 								<div class="delivery__input-title">Имя</div>
-								<input type="text" class="delivery__input-text" placeholder="Иван">
+								<input type="text" class="delivery__input-text" placeholder="Иван" name="firstname" required>
 							</label>
 							<label class="delivery__input">
 								<div class="delivery__input-title">Телефон</div>
-								<input type="text" class="delivery__input-text" placeholder="89212264923">
+								<input type="tel" class="delivery__input-text" placeholder="89212264923" name="phone"  required>
 							</label>
 						</div>
 						<div class="delivery__row">
@@ -867,7 +867,7 @@
 						<div class="delivery__row area-margin">
 							<label class="delivery__textarea-label">
 								<div class="delivery__input-title">Комментарий</div>
-								<textarea class="delivery__input-text delivery__textarea" placeholder=""></textarea>
+								<textarea class="delivery__input-text delivery__textarea" placeholder="" name="comment" required></textarea>
 							</label>
 						</div>
 						<div class="delivery__row row-center">
@@ -890,8 +890,8 @@
 							</label>
 						</div>
 						<div class="delivery__row row-center">
-							<a href="#" class="btn btn-red">Заказать</a>
-							<a href="#" class="btn">Очистить</a>
+							<input class="btn btn-red" id="btn_send" type="submit" name="submit_btn" value="Заказать">
+							<input class="btn" id="btn_send" type="reset" name="reset_btn" value="Очистить">
 						</div>
 					</div>
 				</form>
@@ -946,9 +946,8 @@
 		</section>
 	</div>
 	<!-- nav section -->
-	<div class="hamburger-link" id="menu_btn">
-		<div class="hamburger-bar">
-		</div>
+	<div href="#" class="hamburger-link" id="menu_btn">
+		<div class="hamburger-bar"></div>
 	</div>
 	<div class="hamburger-menu" id="ham_menu">
 		<div class="hamburger-menu__logo">
@@ -1008,11 +1007,21 @@
 		</ul>
 	</div>
 	<!-- modal window -->
-	<div class="modal">
-
+	<div class="modal" id="modal">
+		<div class="modal__inner" id="modal_inner">
+		</div>
 	</div>
 </body>
+<script type="template" id="overlayTemplate">
+	<div class="overlay">
+		<div class="modal__title" id="tittle_mod"></div>
+	<p class="modal__text" id="text_mod"></p>
+	<a href="#" class="modal__link" id="close_btn">
+		<div class="modal__close"></div>
+	</a>
+</div>
+</script>
 <script src="./libs/jquery-3.3.1.min.js"></script>
 <script src="./js/app.min.js"></script>
-
+<!-- <script src="./js/test2.js"></script> -->
 </html>

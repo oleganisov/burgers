@@ -60,6 +60,7 @@
     display: flex;
     color: #fff;
     height: 0;
+    transition: height .3s;
     overflow: hidden;
     padding-top: rem(20px);
     @include tablets {
@@ -77,7 +78,6 @@
     justify-content: center;
     margin-right: rem(22px);
     @include tablets {
-
       margin-right: initial;
       margin-bottom: rem(25px);
     }
@@ -97,10 +97,7 @@
 }
 
 .team__item.is-active .team__expand {
-  height: auto;
-  @include tablets {
-    height: rem(220px);
-  }
+  transition: height .3s;
 }
 
 .team__item.is-active .link-ico {
