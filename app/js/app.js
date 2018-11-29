@@ -247,7 +247,7 @@ placemarks.forEach(obj =>{
   },
   {
     iconLayout:'default#image',
-    iconImageHref:'../img/icons/map-marker.svg',
+    iconImageHref:'./img/icons/map-marker.svg',
     iconImageSize:[46,57],
     iconImageOffset:[-23,-57]
   })
