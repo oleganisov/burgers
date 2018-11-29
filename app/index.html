@@ -7,15 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Проект BURGER</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./css/fullpage.css">
 	<link rel="stylesheet" href="./css/main.css">
 	<link rel="icon" href="./favicon.png" type="image/png" />
-
 </head>
-
 <body>
 	<div class="wrapper" id="fullpage">
 		<!-- first section -->
-		<section class="section first" id="sec_first">
+		<section class="section first" id="sec_first" data-anchor="Page1">
 			<div class="container container--first">
 				<header class="header">
 					<div class="header__logo">
@@ -75,7 +74,7 @@
 			</div>
 		</section>
 		<!-- we section -->
-		<section class="section we" id="sec_we">
+		<section class="section we" id="sec_we" data-anchor="Page2">
 			<div class="container">
 				<h2 class="we__title title-black">Мы лучшие</h2>
 				<div class="we__features">
@@ -134,7 +133,7 @@
 			</div>
 		</section>
 		<!-- slider section -->
-		<section class="section slider" id="sec_slider">
+		<section class="section slider" id="sec_slider" data-anchor="Page3">
 			<div class="container container--slider">
 				<a class="slider__prev" href="#" id="slide-prev">
 					<svg class="arrow-left">
@@ -587,7 +586,7 @@
 			</div>
 		</section>
 		<!-- team section -->
-		<section class="section team" id="sec_team">
+		<section class="section team" id="sec_team" data-anchor="Page4">
 			<div class="team__nav">
 				<div class="team__title title-yellow">команда</div>
 				<div class="team__menu">
@@ -665,7 +664,7 @@
 			</div>
 		</section>
 		<!-- menu section -->
-		<section class="section menu" id="sec_menu">
+		<section class="section menu" id="sec_menu" data-anchor="Page5">
 			<div class="menu__title title-white">меню</div>
 			<!-- <div class="menu__accordeon"> -->
 			<ul class="accordeon" id="menu_accord">
@@ -707,7 +706,7 @@
 			<!-- </div> -->
 		</section>
 		<!-- reviews section -->
-		<section class="section reviews" id="sec_review">
+		<section class="section reviews" id="sec_review" data-anchor="Page6">
 			<ul class="reviews__list">
 				<li class="reviews__item">
 					<div class="reviews__photo" style="background-image: url('./img/content/reviews/1.jpg');"></div>
@@ -817,7 +816,7 @@
 
 		</section>
 		<!-- work section -->
-		<section class="section work" id="sec_work">
+		<section class="section work" id="sec_work" data-anchor="Page7">
 			<div class="container">
 				<h2 class="work__title title-black">Как мы работаем</h2>
 				<div class="work__player">
@@ -826,7 +825,7 @@
 			</div>
 		</section>
 		<!-- delivery section -->
-		<section class="section delivery" id="sec_deliv">
+		<section class="section delivery" id="sec_deliv" data-anchor="Page8">
 			<div class="container">
 				<div>
 					<h2 class="delivery__title title-yellow">Закажите доставку</h2>
@@ -903,7 +902,7 @@
 			</div>
 		</section>
 		<!-- map section -->
-		<section class="section map" id="sec_map">
+		<section class="section map" id="sec_map" data-anchor="Page9">
 			<div class="yandex-map">
 			</div>
 			<footer class="footer">
@@ -1028,7 +1027,7 @@
 </script>
 <script src="./libs/jquery-3.3.1.min.js"></script>
 <script src="//api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript" src="./libs/fullpage.extensions.min.js"></script>
 <script src="./js/app.min.js"></script>
 </body>
-
 </html>
