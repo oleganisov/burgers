@@ -13,9 +13,9 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="fullpage">
 		<!-- first section -->
-		<section class="section first">
+		<section class="section first" id="sec_first">
 			<div class="container container--first">
 				<header class="header">
 					<div class="header__logo">
@@ -817,9 +817,14 @@
 
 		</section>
 		<!-- work section -->
-		<!-- <section class="section work" id="sec_work">
-
-		</section> -->
+		<section class="section work" id="sec_work">
+			<div class="container">
+				<h2 class="work__title title-black">Как мы работаем</h2>
+				<div class="work__player">
+					<video class="work__video" src="./mpg/video.mp4" controls></video>
+				</div>
+			</div>
+		</section>
 		<!-- delivery section -->
 		<section class="section delivery" id="sec_deliv">
 			<div class="container">
@@ -1011,7 +1016,7 @@
 		<div class="modal__inner" id="modal_inner">
 		</div>
 	</div>
-</body>
+
 <script type="template" id="overlayTemplate">
 	<div class="overlay">
 		<div class="modal__title" id="tittle_mod"></div>
@@ -1024,5 +1029,6 @@
 <script src="./libs/jquery-3.3.1.min.js"></script>
 <script src="//api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
 <script src="./js/app.min.js"></script>
-<!-- <script src="./js/test2.js"></script> -->
+</body>
+
 </html>

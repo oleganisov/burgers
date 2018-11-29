@@ -1,0 +1,10 @@
+.work {
+  position: relative;
+  background: url(../img/bg/player-bg.png) no-repeat center center /cover;
+  &__title{
+    margin-bottom: rem(50px);
+  }
+  &__video{
+    max-width: rem(660px);
+  }
+}

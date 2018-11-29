@@ -1598,6 +1598,19 @@ button {
   }
 }
 
+.work {
+  position: relative;
+  background: url(../img/bg/player-bg.png) no-repeat center center/cover;
+}
+
+.work__title {
+  margin-bottom: 3.57143rem;
+}
+
+.work__video {
+  max-width: 47.14286rem;
+}
+
 .map {
   position: relative;
   background: url(../img/bg/map.png) no-repeat center center/cover;
