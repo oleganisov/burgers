@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<link rel="icon" href="./favicon.png" type="image/png" />
 </head>
+
 <body>
 	<div class="wrapper" id="fullpage">
 		<!-- first section -->
@@ -26,25 +27,25 @@
 						<nav class="nav">
 							<div class="nav__elem">
 								<ul class="nav__list">
-									<li class="nav__item">
+									<li class="nav__item" data-menuanchor="2">
 										<a href="#sec_we" class="nav__link">О НАС</a>
 									</li>
-									<li class="nav__item">
+									<li class="nav__item" data-menuanchor="3">
 										<a href="#sec_slider" class="nav__link">БУРГЕРЫ</a>
 									</li>
-									<li class="nav__item">
+									<li class="nav__item" data-menuanchor="4">
 										<a href="#sec_team" class="nav__link">КОМАНДА</a>
 									</li>
-									<li class="nav__item">
+									<li class="nav__item" data-menuanchor="5">
 										<a href="#sec_menu" class="nav__link">МЕНЮ</a>
 									</li>
-									<li class="nav__item ">
+									<li class="nav__item" data-menuanchor="6">
 										<a href="#sec_review" class="nav__link">ОТЗЫВЫ</a>
 									</li>
-									<li class="nav__item">
+									<li class="nav__item" data-menuanchor="7">
 										<a href="#sec_work" class="nav__link">КАК МЫ РАБОТАЕМ</a>
 									</li>
-									<li class="nav__item">
+									<li class="nav__item" data-menuanchor="9">
 										<a href="#sec_map" class="nav__link">КОНТАКТЫ</a>
 									</li>
 								</ul>
@@ -148,7 +149,7 @@
 				<div class="slider__elems" id="slide-elems">
 					<ul class="slider__list" id="slide-list" style="right:0">
 						<li class="slider__item">
-							<div class="slider__ico recipe" onmouseover=recipeMouseOver() onmouseout=recipeMouseOut()>
+							<div class="slider__ico recipe">
 								<img class="slider__icon" src="./img/icons/burger.svg" alt="">
 								<div class="slider__icon-text">состав</div>
 								<div class="recipe__dropdown">
@@ -666,7 +667,6 @@
 		<!-- menu section -->
 		<section class="section menu" id="sec_menu" data-anchor="Page5">
 			<div class="menu__title title-white">меню</div>
-			<!-- <div class="menu__accordeon"> -->
 			<ul class="accordeon" id="menu_accord">
 				<li class="accordeon__item">
 					<a class="accordeon__link" href="#" style="background-image: url('./img/bg/menu-1.png')">
@@ -675,7 +675,8 @@
 					</a>
 					<div class="accordeon__expand" style="width: 0px;">
 						<p class="accordeon__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit perspiciatis quos
-							magnam doloremque expedita voluptatem aliquam mollitia beatae iusto explicabo neque, consequuntur deserunt atque
+							magnam doloremque expedita voluptatem aliquam mollitia beatae iusto explicabo neque, consequuntur deserunt
+							atque
 							ex velit delectus, minima quas veritatis.</p>
 					</div>
 				</li>
@@ -703,7 +704,6 @@
 					</div>
 				</li>
 			</ul>
-			<!-- </div> -->
 		</section>
 		<!-- reviews section -->
 		<section class="section reviews" id="sec_review" data-anchor="Page6">
@@ -820,11 +820,7 @@
 			<div class="container">
 				<h2 class="work__title title-black">Как мы работаем</h2>
 				<div class="work__player">
-					<!-- <video class="work__video" src="./mpg/video.mp4" controls></video> -->
-					<video class="work__video" controls>
-					<source src="//youtu.be/64rlEOhf7Wk">
-					</video>
-					<!-- <iframe width="1189" height="669" src="https://www.youtube.com/embed/64rlEOhf7Wk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+					<video class="work__video" src="./mpg/video.mp4" controls></video>
 				</div>
 			</div>
 		</section>
@@ -964,22 +960,22 @@
 			</div>
 		</div>
 		<ul class="hamburger-menu__list" id="ham_list">
-			<li class="hamburger-menu__item">
+			<li class="hamburger-menu__item" data-menuanchor="2">
 				<a href="#sec_we" class="hamburger-menu__link">о нас</a>
 			</li>
-			<li class="hamburger-menu__item">
+			<li class="hamburger-menu__item" data-menuanchor="3">
 				<a href="#sec_slider" class="hamburger-menu__link">бургеры</a>
 			</li>
-			<li class="hamburger-menu__item">
+			<li class="hamburger-menu__item" data-menuanchor="4">
 				<a href="#sec_team" class="hamburger-menu__link">команда</a>
 			</li>
-			<li class="hamburger-menu__item">
+			<li class="hamburger-menu__item" data-menuanchor="5">
 				<a href="#sec_menu" class="hamburger-menu__link">меню</a>
 			</li>
-			<li class="hamburger-menu__item">
+			<li class="hamburger-menu__item" data-menuanchor="6">
 				<a href="#sec_review" class="hamburger-menu__link">отзывы</a>
 			</li>
-			<li class="hamburger-menu__item">
+			<li class="hamburger-menu__item" data-menuanchor="9">
 				<a href="#sec_map" class="hamburger-menu__link">контакты</a>
 			</li>
 		</ul>
@@ -1019,6 +1015,7 @@
 		<div class="modal__inner" id="modal_inner">
 		</div>
 	</div>
+	<script src="./libs/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="./libs/fullpage.extensions.min.js"></script>
 	<script type="text/javascript" src="./js/fullpage.js"></script>
 </body>
@@ -1031,8 +1028,9 @@
 	</a>
 </div>
 </script>
-<script src="./libs/jquery-3.3.1.min.js"></script>
+<!-- <script src="./libs/jquery-3.3.1.min.js"></script> -->
 <script src="./js/app.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script type="text/javascript" src="./js/ymaps.js"></script>
+
 </html>

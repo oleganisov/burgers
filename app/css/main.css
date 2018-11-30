@@ -741,7 +741,15 @@ button {
 }
 
 .menu__title {
-  margin: 8.07143rem 0 0 5.21429rem;
+  position: absolute;
+  top: 10%;
+  left: 7%;
+}
+
+@media (max-width: 480px) {
+  .menu__title {
+    font-size: 3.57143rem;
+  }
 }
 
 .accordeon {
@@ -1599,6 +1607,12 @@ button {
   margin-bottom: 3.57143rem;
 }
 
+@media (max-width: 480px) {
+  .work__title {
+    font-size: 3.57143rem;
+  }
+}
+
 .work__video {
   max-width: 47.14286rem;
 }
@@ -1766,7 +1780,7 @@ button {
 }
 
 #fp-nav.fp-right {
-  top: 15%;
+  top: 25%;
   right: 3%;
 }
 

@@ -2,7 +2,12 @@
   position: relative;
   background: url('../img/bg/menu-bg.png') no-repeat center center / cover;
   &__title {
-    margin: rem(113px) 0 0 rem(73px);
+    position: absolute;
+    top:10%;
+    left:7%;
+    @include phones {
+      font-size: rem(50px);
+    }
   }
 }
 

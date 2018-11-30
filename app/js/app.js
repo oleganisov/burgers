@@ -165,6 +165,8 @@ function createOverlay(template) {
 };
 
 /////////////////////////form data
+
+let formOrder=function(){
 const form_order=document.querySelector('#form_order');
 
   form_order.addEventListener('submit',function(e){
@@ -193,7 +195,11 @@ const form_order=document.querySelector('#form_order');
     overlay.open();
  };
 });
-// 
+};
+formOrder();
+// отображение ингридиентов по mouseover/mouseout
+let mouseMove=function(){
+const recipes=document.querySelectorAll('.recipe');
 
 function recipeMouseOver(){
   $('.recipe__dropdown').css({'left':'100%','opacity':1});
@@ -203,3 +209,15 @@ function recipeMouseOut(){
   $('.recipe__dropdown').css({'left':'-9999px','opacity':0});
   $('.recipe').css('background-color','rgba(227, 80, 40, 0.4)');
 };
+
+recipes.forEach(recipe =>{
+  recipe.addEventListener('mouseover',function(e){
+    recipeMouseOver();
+  });
+  recipe.addEventListener('mouseout',function(e){
+    recipeMouseOut();
+  });
+});
+};
+mouseMove();
+
