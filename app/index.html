@@ -65,7 +65,7 @@
 					</div>
 				</div>
 				<div class="next-screen">
-					<a href="#sec_we">
+					<a href="#sec_we" class="next-screen__link">
 						<svg class="arrow-pic">
 							<use xlink:href="./img/icons/sprite.svg#arrow-scroll" />
 						</svg>
@@ -148,7 +148,7 @@
 				<div class="slider__elems" id="slide-elems">
 					<ul class="slider__list" id="slide-list" style="right:0">
 						<li class="slider__item">
-							<div class="slider__ico recipe">
+							<div class="slider__ico recipe" onmouseover=recipeMouseOver() onmouseout=recipeMouseOut()>
 								<img class="slider__icon" src="./img/icons/burger.svg" alt="">
 								<div class="slider__icon-text">состав</div>
 								<div class="recipe__dropdown">
@@ -820,7 +820,11 @@
 			<div class="container">
 				<h2 class="work__title title-black">Как мы работаем</h2>
 				<div class="work__player">
-					<video class="work__video" src="./mpg/video.mp4" controls></video>
+					<!-- <video class="work__video" src="./mpg/video.mp4" controls></video> -->
+					<video class="work__video" controls>
+					<source src="//youtu.be/64rlEOhf7Wk">
+					</video>
+					<!-- <iframe width="1189" height="669" src="https://www.youtube.com/embed/64rlEOhf7Wk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 				</div>
 			</div>
 		</section>
@@ -839,7 +843,7 @@
 							</label>
 							<label class="delivery__input">
 								<div class="delivery__input-title">Телефон</div>
-								<input type="tel" class="delivery__input-text" placeholder="89212264923" name="phone"  required>
+								<input type="tel" class="delivery__input-text" placeholder="89212264923" name="phone" required>
 							</label>
 						</div>
 						<div class="delivery__row">
@@ -903,7 +907,7 @@
 		</section>
 		<!-- map section -->
 		<section class="section map" id="sec_map" data-anchor="Page9">
-			<div class="yandex-map">
+			<div class="yandex-map" id="yandex_map">
 			</div>
 			<footer class="footer">
 				<div class="contact">
@@ -982,7 +986,7 @@
 
 	</div>
 	<!-- points section -->
-	<div class="points">
+	<!-- <div class="points">
 		<ul class="points__list">
 			<li class="points__item is-active">
 				<a href="#" class="points__link"></a>
@@ -1009,13 +1013,15 @@
 				<a href="#" class="points__link"></a>
 			</li>
 		</ul>
-	</div>
+	</div> -->
 	<!-- modal window -->
 	<div class="modal" id="modal">
 		<div class="modal__inner" id="modal_inner">
 		</div>
 	</div>
-
+	<script type="text/javascript" src="./libs/fullpage.extensions.min.js"></script>
+	<script type="text/javascript" src="./js/fullpage.js"></script>
+</body>
 <script type="template" id="overlayTemplate">
 	<div class="overlay">
 		<div class="modal__title" id="tittle_mod"></div>
@@ -1026,8 +1032,7 @@
 </div>
 </script>
 <script src="./libs/jquery-3.3.1.min.js"></script>
-<script src="//api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
-<script type="text/javascript" src="./libs/fullpage.extensions.min.js"></script>
 <script src="./js/app.min.js"></script>
-</body>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript" src="./js/ymaps.js"></script>
 </html>

@@ -1,0 +1,51 @@
+// fullpage plugin fp-nav
+#fp-nav.fp-right {
+  top: 15%;
+  right: 3%;
+  @include tablets{
+    display: none;
+  }
+}
+%pseudo {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: block;
+}
+
+#fp-nav ul li a span{
+  display: none;
+}
+#fp-nav ul li a{
+position: relative;
+width: rem(6px);
+height: rem(6px);
+display: block;
+&::before {
+  @extend %pseudo;
+  width: rem(6px);
+  height: rem(6px);
+  background: #fff;
+}
+&::after {
+  @extend %pseudo;
+  width: 0;
+  height: 0;
+  border: rem(1px) solid #fff;
+  opacity: 0;
+  transition: .3s;
+}
+&:hover::after{
+  width: rem(16px);
+  height: rem(16px);
+  opacity: 1;
+}
+}
+#fp-nav ul li a.active::after{
+  width: rem(16px);
+  height: rem(16px);
+  opacity: 1;
+}

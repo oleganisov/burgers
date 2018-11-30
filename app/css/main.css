@@ -1426,10 +1426,6 @@ button {
           border-radius: 0.35714rem;
 }
 
-.recipe:hover {
-  background-color: #e35028;
-}
-
 @media (max-width: 768px) {
   .recipe {
     top: 5%;
@@ -1474,11 +1470,6 @@ button {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.recipe:hover .recipe__dropdown {
-  left: 100%;
-  opacity: 1;
 }
 
 .row-pic {
@@ -1615,6 +1606,11 @@ button {
 .map {
   position: relative;
   background: url(../img/bg/map.png) no-repeat center center/cover;
+}
+
+.yandex-map {
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
@@ -1769,7 +1765,18 @@ button {
   opacity: 1;
 }
 
-.points__link::before, .points__link::after {
+#fp-nav.fp-right {
+  top: 15%;
+  right: 3%;
+}
+
+@media (max-width: 768px) {
+  #fp-nav.fp-right {
+    display: none;
+  }
+}
+
+#fp-nav ul li a::before, #fp-nav ul li a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1782,36 +1789,24 @@ button {
   display: block;
 }
 
-.points {
-  position: fixed;
-  top: 15%;
-  right: 3%;
+#fp-nav ul li a span {
+  display: none;
 }
 
-@media (max-width: 768px) {
-  .points {
-    display: none;
-  }
-}
-
-.points__item {
-  margin-bottom: 1.14286rem;
-}
-
-.points__link {
+#fp-nav ul li a {
   position: relative;
   width: 0.42857rem;
   height: 0.42857rem;
   display: block;
 }
 
-.points__link::before {
+#fp-nav ul li a::before {
   width: 0.42857rem;
   height: 0.42857rem;
   background: #fff;
 }
 
-.points__link::after {
+#fp-nav ul li a::after {
   width: 0;
   height: 0;
   border: 0.07143rem solid #fff;
@@ -1821,13 +1816,13 @@ button {
   transition: .3s;
 }
 
-.points__link:hover::after {
+#fp-nav ul li a:hover::after {
   width: 1.14286rem;
   height: 1.14286rem;
   opacity: 1;
 }
 
-.points__item.is-active .points__link::after {
+#fp-nav ul li a.active::after {
   width: 1.14286rem;
   height: 1.14286rem;
   opacity: 1;

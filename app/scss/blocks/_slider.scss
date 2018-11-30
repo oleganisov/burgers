@@ -123,9 +123,9 @@
   background-color: rgba(227, 80, 40, 0.4);
   transition: background-color .3s;
   border-radius: rem(5px);
-  &:hover {
-    background-color: rgba(227, 80, 40, 1);
-  }
+  // &:hover {
+  //   background-color: rgba(227, 80, 40, 1);
+  // }
   @include tablets {
     top: 5%;
     left: 10%;
@@ -153,10 +153,10 @@
   }
 }
 
-.recipe:hover .recipe__dropdown {
-  left: 100%;
-  opacity: 1;
-}
+// .recipe:hover .recipe__dropdown {
+//   left: 100%;
+//   opacity: 1;
+// }
 
 .row-pic {
   width: rem(45px);
