@@ -32,9 +32,10 @@ const slide_next=document.querySelector('#slide-next'),
 // устанавливает right; a - текущее значение right, b - шаг сдвига 
 function shift_right(a,b){
   slide_list.style.right=a+b+'px';
-  // $(slide_list).animate({right:a+b+'px'},200);
-  console.log(slide_list.style);
 };
+// function slide_anime(a,b){
+//   $(slide_list).animate(right,200,shift_right(a,b));
+// }
 // получает текущее свойство right
 function current_right(){
   let cur_right=parseInt(style.right,10);

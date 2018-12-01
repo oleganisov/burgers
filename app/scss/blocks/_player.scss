@@ -14,6 +14,12 @@
     left: 50%;
     top: 50%;
     transform: translate(-50% -50%);
+    @include tablets{
+      max-width: rem(60px);
+    }
+    @include phones{
+      max-width: rem(40px);
+    }
   }
   &__video {
     max-width: 100%;
@@ -31,6 +37,9 @@
     flex: 1;
     align-items: center;
     margin-right: rem(45px);
+    @include tablets{
+      margin-right: rem(25px);
+    }
   }
   &__startpause {
     padding-left: rem(20px);
@@ -43,11 +52,15 @@
   &__control2 {
     display: flex;
     align-items: center;
+    @include tablets {
+      display: none;
+    }
   }
   &__volume {
     width: rem(60px);
     margin-right: rem(18px);
     &-img {
+      cursor: pointer;
       margin-right: rem(20px);
     }
   }

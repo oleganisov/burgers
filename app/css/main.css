@@ -260,6 +260,13 @@ button {
           flex: 1;
 }
 
+@media (max-width: 768px) {
+  .first__pic {
+    margin-right: initial;
+    margin-bottom: 5%;
+  }
+}
+
 .first__img {
   max-width: 100%;
   max-height: 100%;
@@ -280,13 +287,20 @@ button {
   padding-top: 8%;
 }
 
+@media (max-width: 768px) {
+  .first__desc {
+    padding-top: initial;
+  }
+}
+
 .first__tittle {
   margin-bottom: 5%;
 }
 
 @media (max-width: 480px) {
   .first__tittle {
-    font-size: 4.5rem;
+    margin-bottom: 3%;
+    font-size: 3.92857rem;
   }
 }
 
@@ -300,12 +314,19 @@ button {
 
 @media (max-width: 480px) {
   .first__text {
-    font-size: 3.85714rem;
+    line-height: 3.57143rem;
+    font-size: 3.21429rem;
   }
 }
 
 .next-screen {
   margin-bottom: 4%;
+}
+
+@media (max-width: 480px) {
+  .next-screen {
+    margin-bottom: 8%;
+  }
 }
 
 .arrow-pic {
@@ -387,6 +408,12 @@ button {
 @media (max-width: 768px) {
   .header__order {
     margin-right: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__order {
+    margin-right: 15%;
   }
 }
 
@@ -1317,7 +1344,7 @@ button {
 
 @media (max-width: 768px) {
   .slider__pic {
-    width: 100%;
+    width: 85%;
   }
 }
 
@@ -1341,7 +1368,7 @@ button {
 
 @media (max-width: 768px) {
   .slider__desc {
-    width: 100%;
+    width: 85%;
   }
 }
 
@@ -1608,7 +1635,13 @@ button {
 
 .work__title {
   text-align: center;
-  margin-bottom: 3.57143rem;
+  margin-bottom: 5.5%;
+}
+
+@media (max-width: 768px) {
+  .work__title {
+    margin-bottom: 15%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1647,6 +1680,18 @@ button {
           transform: translate(-50% -50%);
 }
 
+@media (max-width: 768px) {
+  .player__start-img {
+    max-width: 4.28571rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .player__start-img {
+    max-width: 2.85714rem;
+  }
+}
+
 .player__video {
   max-width: 100%;
 }
@@ -1679,6 +1724,12 @@ button {
   margin-right: 3.21429rem;
 }
 
+@media (max-width: 768px) {
+  .player__control1 {
+    margin-right: 1.78571rem;
+  }
+}
+
 .player__startpause {
   padding-left: 1.42857rem;
   padding-right: 1.28571rem;
@@ -1703,12 +1754,19 @@ button {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .player__control2 {
+    display: none;
+  }
+}
+
 .player__volume {
   width: 4.28571rem;
   margin-right: 1.28571rem;
 }
 
 .player__volume-img {
+  cursor: pointer;
   margin-right: 1.42857rem;
 }
 
@@ -2046,7 +2104,7 @@ button {
   height: 1.78571rem;
   position: fixed;
   right: 3%;
-  top: 6%;
+  top: 4.3%;
   z-index: 10;
 }
 
@@ -2069,6 +2127,12 @@ button {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger-link {
+    top: 7.5%;
   }
 }
 

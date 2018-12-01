@@ -24,6 +24,9 @@
     @include tablets{
     margin-right: 10%;
     }
+    @include phones{
+      margin-right: 15%;
+    }
   }
 
 }

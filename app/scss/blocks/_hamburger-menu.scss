@@ -52,13 +52,16 @@
   height: rem(25px);
   position: fixed;
   right: 3%;
-  top: 6%;
+  top: 4.3%;
   z-index: 10;
   @include tablets {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  @include phones {
+    top: 7.5%;
   }
 }
 
