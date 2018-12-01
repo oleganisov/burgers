@@ -817,10 +817,25 @@
 		</section>
 		<!-- work section -->
 		<section class="section work" id="sec_work" data-anchor="Page7">
-			<div class="container">
+			<div class="container container--work">
 				<h2 class="work__title title-black">Как мы работаем</h2>
-				<div class="work__player">
-					<video class="work__video" src="./mpg/video.mp4" controls></video>
+				<div class="player">
+					<div class="player_screen">
+						<video class="player__video" poster="./img/content/player/splash.png">
+							<source src="./mpg/KUBERNETES.mp4" type="video/mp4">
+						</video>
+						<img class="player__start-img player-start is-active" src="./img/content/player/play_white.png" alt="">
+					</div>
+					<div class="player__controls">
+						<div class="player__control1">
+ 						  <img class="player__startpause player-start" src="./img/content/player/play_gray.png" alt="">
+							<input class="player__progress player-bar" type="range">
+						</div>
+						<div class="player__control2">
+							<img class="player__volume-img" src="./img/content/player/volume.png" alt="">
+							<input class="player__volume player-bar" type="range">
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -1028,9 +1043,9 @@
 	</a>
 </div>
 </script>
-<!-- <script src="./libs/jquery-3.3.1.min.js"></script> -->
 <script src="./js/app.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script type="text/javascript" src="./js/ymaps.js"></script>
+<script type="text/javascript" src="./js/player.js"></script>
 
 </html>
