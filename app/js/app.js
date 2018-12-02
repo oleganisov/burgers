@@ -72,8 +72,7 @@ const team_accord=document.querySelector("#team_accord"),
 // вычисление высоты
 function calcHeight(item){
   let pic_h=$(item).find('.team__pic').height();
-  let desc_h=$(item).find('.team__desc').height();
-  return pic_h+desc_h;
+  return pic_h;
 };
 // вычисление ширины
 function calcWidth(item){
