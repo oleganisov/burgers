@@ -86,6 +86,7 @@
     height: 100%;
   }
   &__desc {
+    flex:1;
     text-align: left;
     @include tablets{
       text-align: center;
@@ -118,5 +119,6 @@
 
 .desc-text {
   line-height: rem(24px);
+
 }
 }
