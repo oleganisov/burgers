@@ -28,7 +28,7 @@ const slide_next=document.querySelector('#slide-next'),
       style=getComputedStyle(slide_list),
       step=parseInt(getComputedStyle(slide_list.firstElementChild).width,10),
       list_width=parseInt(slide_list.children.length,10)*step;
-let inAnimate=false;
+let inAnimate=false; //флаг проверки, запущена ли анимация
 // устанавливает right; a - текущее значение right, b - шаг сдвига 
 function shift_right(a,b){
   slide_list.style.right=a+b+'px';
@@ -53,6 +53,7 @@ slide_next.addEventListener('click',function(e){
   else {
     shift_right(0,0);
 };
+// установка таймера равным длительности анимации
 setTimeout(function(){
   inAnimate=false;
 },200);
@@ -70,6 +71,7 @@ slide_prev.addEventListener('click',function(e){
   else {
     shift_right(list_width,-step);
   };
+  // установка таймера равным длительности анимации
   setTimeout(function(){
     inAnimate=false;
   },200);
@@ -82,6 +84,7 @@ const team_accord=document.querySelector("#team_accord"),
 function calcHeight(item){
   let pic_h=$(item).find('.team__pic').height();
   let win_w=$(window).width();
+  // для таблетов и телефонов берется двойная высота, т.к. развернуто в колонку
   if (win_w<=768){
     result=pic_h*2;
   }else{
@@ -94,6 +97,7 @@ function calcWidth(item){
   let win_w=$(window).width();
   let link_w=$(item).find('a').width();
   let calc_w=win_w-link_w*3;
+  // 550 ширина аккордеона для десктопа
   return calc_w > 550 ? 550 : calc_w;
 };
 // вешаем обработчик на ul
@@ -219,16 +223,17 @@ formOrder();
 // отображение ингридиентов по mouseover/mouseout
 let mouseMove=function(){
 const recipes=document.querySelectorAll('.recipe');
-
+// отображение ингридиентов
 function recipeMouseOver(){
   $('.recipe__dropdown').css({'left':'100%','opacity':1});
   $('.recipe').css('background-color','rgba(227, 80, 40, 1)');
 };
+// скрытие ингридиентов
 function recipeMouseOut(){
   $('.recipe__dropdown').css({'left':'-9999px','opacity':0});
   $('.recipe').css('background-color','rgba(227, 80, 40, 0.4)');
 };
-
+// вешаем обработчики на все кнопки ингридиентов
 recipes.forEach(recipe =>{
   recipe.addEventListener('mouseover',function(e){
     recipeMouseOver();

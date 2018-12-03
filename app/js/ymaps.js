@@ -1,4 +1,5 @@
 ymaps.ready(init);
+// массив маркеров карты
 var placemarks=[
   {
     latitude:59.97,
@@ -37,6 +38,7 @@ var placemarks=[
     ]
   }
 ];
+// инициализация карты с указанием центра коор-т
   function init(){ 
     var map = new ymaps.Map("yandex_map", {
       center: [59.94, 30.32],
@@ -44,6 +46,7 @@ var placemarks=[
       controls:['zoomControl'],
       behaviors:['drag']
     }); 
+// добавление маркеров на карту
 placemarks.forEach(obj =>{
   var placemark=new ymaps.Placemark([obj.latitude,obj.longitude],{
     hintContent:obj.hintContent,

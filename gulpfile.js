@@ -31,9 +31,9 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/js/app.js', // Always at the end
 		])
-	.pipe(sourcemaps.init({loadMaps: true}))
+	// .pipe(sourcemaps.init({loadMaps: true}))
 	.pipe(concat('app.min.js'))
-	.pipe(sourcemaps.write())
+	// .pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/js'))
 	.pipe(browsersync.reload({ stream: true }));
 });
