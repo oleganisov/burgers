@@ -149,26 +149,28 @@ function createOverlay(template) {
   
   fragment = null;
 // установка прослушивателя кликов на кнопке закрытия оверлея
-  closeBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    modal_inner.removeChild(overlayElement);
-    modal.classList.remove('is-active');
-    body.classList.remove('is-locked');
-  });
-
+closeBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+  modal_inner.removeChild(overlayElement);
+  modal.classList.remove('is-active');
+  body.classList.remove('is-locked');
+});
+let open=function(){
+  modal_inner.appendChild(overlayElement);
+  modal.classList.add('is-active');
+  body.classList.add('is-locked');
+};
+let close=function(){
+  closeBtn.click;
+};
+let setContent=function(tittle_mod,text_mod){
+  contentText.innerHTML = text_mod;
+  contentTittle.innerHTML = tittle_mod;
+};
   return {
-    open() {
-      modal_inner.appendChild(overlayElement);
-      modal.classList.add('is-active');
-      body.classList.add('is-locked');
-    },
-    close() {
-      closeBtn.click();
-    },
-    setContent(tittle_mod,text_mod) {
-      contentText.innerHTML = text_mod;
-      contentTittle.innerHTML = tittle_mod;
-    }
+    open,
+    close,
+    setContent
   };
 };
 
