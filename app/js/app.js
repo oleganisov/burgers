@@ -110,7 +110,7 @@ function addLsnUl(elem_ul,item_class,expand_class){
         if (expand_class=='.accordeon__expand'){
           $(item).find(expand_class).width('0px');
         }else{
-          $(item).find(expand_class).height('0px');
+          $(item).find(expand_class).outerHeight('0px');
         };
       };
       if (item==curItem&&item!==activeItem){
