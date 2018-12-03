@@ -559,24 +559,7 @@ button {
 }
 
 .team__nav {
-  text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 5% 5% 0% 7%;
   position: absolute;
   width: 50%;
   right: 0;
@@ -588,19 +571,22 @@ button {
 
 @media (max-width: 768px) {
   .team__nav {
+    padding: initial;
+    padding-top: 25%;
     width: 100%;
   }
 }
 
+.team__title {
+  margin-bottom: 3.92857rem;
+}
+
 @media (max-width: 768px) {
   .team__title {
+    text-align: center;
     font-size: 3.57143rem;
     margin-bottom: 3.92857rem;
   }
-}
-
-.team__menu {
-  padding: 3.92857rem 6.78571rem 0 7.14286rem;
 }
 
 @media (max-width: 768px) {
@@ -628,7 +614,7 @@ button {
 }
 
 .team__item {
-  margin-bottom: 2.14286rem;
+  margin-bottom: 4%;
 }
 
 .team:last-child {
@@ -2107,7 +2093,7 @@ button {
   display: none;
   height: 1.78571rem;
   position: fixed;
-  right: 3%;
+  right: 4%;
   top: 4.3%;
   z-index: 10;
 }
@@ -2137,6 +2123,7 @@ button {
 @media (max-width: 480px) {
   .hamburger-link {
     top: 7.5%;
+    right: 5%;
   }
 }
 

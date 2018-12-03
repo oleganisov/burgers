@@ -2,11 +2,7 @@
   background: url('../img/bg/team.png') no-repeat center center / cover;
   position: relative;
   &__nav {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 5% 5% 0% 7%;
     position: absolute;
     width: 50%;
     right: 0;
@@ -15,17 +11,23 @@
     background-color: $black;
     opacity: 0.9;
     @include tablets {
+      padding: initial;
+      padding-top: 25%;
       width: 100%;
+    }
+    @include phones {
+      // padding-top: 15%;
     }
   }
   &__title {
+    margin-bottom: rem(55px);
     @include tablets {
+      text-align: center;
       font-size: rem(50px);
       margin-bottom: rem(55px);
     }
   }
   &__menu {
-    padding: rem(55px) rem(95px) 0 rem(100px);
     @include tablets {
       padding: 0 rem(56px);
     }
@@ -38,7 +40,7 @@
     }
   }
   &__item {
-    margin-bottom: rem(30px);
+    margin-bottom: 4%;
   }
   &:last-child {
     margin-bottom: 0;
