@@ -28,14 +28,11 @@ const slide_next=document.querySelector('#slide-next'),
       style=getComputedStyle(slide_list),
       step=parseInt(getComputedStyle(slide_list.firstElementChild).width,10),
       list_width=parseInt(slide_list.children.length,10)*step;
-
+let inAnimate=false;
 // устанавливает right; a - текущее значение right, b - шаг сдвига 
 function shift_right(a,b){
   slide_list.style.right=a+b+'px';
 };
-// function slide_anime(a,b){
-//   $(slide_list).animate(right,200,shift_right(a,b));
-// }
 // получает текущее свойство right
 function current_right(){
   let cur_right=parseInt(style.right,10);
@@ -47,17 +44,25 @@ function current_right(){
 //обработчик клика по кнопке next
 slide_next.addEventListener('click',function(e){
   e.preventDefault();
+  if (!inAnimate){
+    inAnimate=true;
   let cur_right=current_right();
   if (cur_right<list_width-step){
     shift_right(cur_right,step);
   } 
   else {
     shift_right(0,0);
-}
+};
+setTimeout(function(){
+  inAnimate=false;
+},200);
+};
 });
 //обработчик клика по кнопке prev
 slide_prev.addEventListener('click',function(e){
   e.preventDefault();
+  if (!inAnimate){
+    inAnimate=true;
   let  cur_right=current_right();
   if (cur_right>0){
     shift_right(cur_right,-step);
@@ -65,6 +70,10 @@ slide_prev.addEventListener('click',function(e){
   else {
     shift_right(list_width,-step);
   };
+  setTimeout(function(){
+    inAnimate=false;
+  },200);
+};
 });
 /////////////////////////accordeon team & menu
 const team_accord=document.querySelector("#team_accord"),
